@@ -18,8 +18,8 @@ public class Connect_database {
     public static Connection connecerDb(){
         try {
             Class.forName("org.sqlite.JDBC");
-            Connection conn=DriverManager.getConnection("jdbc:sqlite:C:\\Users\\Xeeshan\\Documents\\NetBeansProjects\\Coching_Database\\database.sqlite");
-            JOptionPane.showMessageDialog(null, "connection ");
+            Connection conn=DriverManager.getConnection("jdbc:sqlite:C:\\Users\\Xeeshan\\Documents\\NetBeansProjects\\Coching_datbase_project\\database.sqlite");
+           /* JOptionPane.showMessageDialog(null, "connection "); */
             return conn;
             
         } catch (Exception e) {
