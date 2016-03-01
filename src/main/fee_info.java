@@ -7,6 +7,8 @@ package main;
 
 import javax.swing.*;
 import java.sql.*;
+import java.util.*;
+
 /**
  *
  * @author Xeeshan
@@ -21,6 +23,16 @@ PreparedStatement pst =null;
     public fee_info() {
         initComponents();
         conn=Connect_database.connecerDb();
+        CurrentDate();
+    }
+     
+    public void CurrentDate(){
+       Calendar cal= new GregorianCalendar();
+       int month=cal.get(Calendar.MONTH);
+       int year =cal.get(Calendar.YEAR);
+       int day =cal.get(Calendar.DAY_OF_MONTH);
+       date_txt.setText(  day +" / "+ (month+1)+" / " +year);
+    
     }
 
     /**
@@ -44,7 +56,7 @@ PreparedStatement pst =null;
         fee_txt = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        date_txt = new javax.swing.JTextField();
         jComboBox1 = new javax.swing.JComboBox<>();
         Search_txt = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
@@ -82,7 +94,7 @@ PreparedStatement pst =null;
 
         jLabel6.setText("Month");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Janwary", "Febrary", "March ", "April", "May", "Jun", "July", "Agust", "Setember", "October", "November", "December", " " }));
 
         Search_txt.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -114,7 +126,7 @@ PreparedStatement pst =null;
                     .addComponent(class_txt)
                     .addComponent(fee_txt)
                     .addComponent(gr_no)
-                    .addComponent(jTextField6)
+                    .addComponent(date_txt)
                     .addComponent(Search_txt))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -152,7 +164,7 @@ PreparedStatement pst =null;
                         .addGap(15, 15, 15)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(date_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(38, Short.MAX_VALUE))
         );
@@ -227,6 +239,7 @@ PreparedStatement pst =null;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField Search_txt;
     private javax.swing.JTextField class_txt;
+    private javax.swing.JTextField date_txt;
     private javax.swing.JTextField fee_txt;
     private javax.swing.JTextField gr_no;
     private javax.swing.JComboBox<String> jComboBox1;
@@ -239,7 +252,6 @@ PreparedStatement pst =null;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField name_txt;
     // End of variables declaration//GEN-END:variables
 }
