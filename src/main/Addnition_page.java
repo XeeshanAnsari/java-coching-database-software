@@ -70,12 +70,12 @@ PreparedStatement pst=null;
         jLabel4.setText("Date Of Birth");
 
         birth_txt.addAncestorListener(new javax.swing.event.AncestorListener() {
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
-            }
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
                 birth_txtAncestorAdded(evt);
             }
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
         });
 
@@ -107,7 +107,16 @@ PreparedStatement pst=null;
             }
         });
 
-        class_txt.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "9th", "10th", "1st year", "2nd year" }));
+        class_txt.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Class", "9th", "10th", "1st year", "2nd year" }));
+        class_txt.addPopupMenuListener(new javax.swing.event.PopupMenuListener() {
+            public void popupMenuCanceled(javax.swing.event.PopupMenuEvent evt) {
+            }
+            public void popupMenuWillBecomeInvisible(javax.swing.event.PopupMenuEvent evt) {
+                class_txtPopupMenuWillBecomeInvisible(evt);
+            }
+            public void popupMenuWillBecomeVisible(javax.swing.event.PopupMenuEvent evt) {
+            }
+        });
 
         jMenu1.setText("File");
 
@@ -295,6 +304,22 @@ PreparedStatement pst=null;
         fee_info f= new fee_info();
           f.setVisible(true);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void class_txtPopupMenuWillBecomeInvisible(javax.swing.event.PopupMenuEvent evt) {//GEN-FIRST:event_class_txtPopupMenuWillBecomeInvisible
+      String combo=(String) class_txt.getSelectedItem();
+      if(combo=="9th"){
+          Gr_no.setText("A");
+      }
+      if(combo=="10th"){
+          Gr_no.setText("B");
+      }
+      if(combo=="1st year"){
+          Gr_no.setText("C");
+      }
+      if(combo=="2nd year"){
+          Gr_no.setText("D");
+      }
+    }//GEN-LAST:event_class_txtPopupMenuWillBecomeInvisible
 
     /**
      * @param args the command line arguments

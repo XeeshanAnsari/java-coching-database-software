@@ -295,14 +295,18 @@
     <Component class="javax.swing.JComboBox" name="class_txt">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="9th"/>
-            <StringItem index="1" value="10th"/>
-            <StringItem index="2" value="1st year"/>
-            <StringItem index="3" value="2nd year"/>
+          <StringArray count="5">
+            <StringItem index="0" value="Select Class"/>
+            <StringItem index="1" value="9th"/>
+            <StringItem index="2" value="10th"/>
+            <StringItem index="3" value="1st year"/>
+            <StringItem index="4" value="2nd year"/>
           </StringArray>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="popupMenuWillBecomeInvisible" listener="javax.swing.event.PopupMenuListener" parameters="javax.swing.event.PopupMenuEvent" handler="class_txtPopupMenuWillBecomeInvisible"/>
+      </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
