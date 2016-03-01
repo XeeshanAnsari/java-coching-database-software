@@ -282,12 +282,12 @@ PreparedStatement pst=null;
     }//GEN-LAST:event_address_txtActionPerformed
 
     private void show_cmdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_show_cmdActionPerformed
-          Show_Record a= new Show_Record();
+          Show_Record_1 a= new Show_Record_1();
           a.setVisible(true);
     }//GEN-LAST:event_show_cmdActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        Show_Record s= new Show_Record();
+        Show_Record_1 s= new Show_Record_1();
           s.setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 

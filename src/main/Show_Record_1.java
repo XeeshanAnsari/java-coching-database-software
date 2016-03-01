@@ -12,7 +12,7 @@ import javax.swing.*;
  *
  * @author Xeeshan
  */
-public class Show_Record extends javax.swing.JFrame  {
+public class Show_Record_1 extends javax.swing.JFrame  {
 Connection conn=null;
 ResultSet rs=null;
 PreparedStatement pst=null;
@@ -20,7 +20,7 @@ PreparedStatement pst=null;
     /**
      * Creates new form Show_Record
      */
-    public Show_Record() {
+    public Show_Record_1() {
         initComponents();
         conn= Connect_database.connecerDb();
         Update_table();
