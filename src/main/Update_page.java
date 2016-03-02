@@ -125,7 +125,7 @@ PreparedStatement pst=null;
         ));
         jScrollPane1.setViewportView(show_table);
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Addmition Form", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Sylfaen", 1, 18), new java.awt.Color(51, 51, 255))); // NOI18N
 
@@ -329,12 +329,12 @@ PreparedStatement pst=null;
         jPanel15Layout.setHorizontalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
-                .addContainerGap(749, Short.MAX_VALUE)
+                .addContainerGap(732, Short.MAX_VALUE)
                 .addComponent(Delete_table_two9)
                 .addGap(18, 18, 18)
                 .addComponent(Print_table_two9)
                 .addContainerGap())
-            .addComponent(jScrollPane15, javax.swing.GroupLayout.DEFAULT_SIZE, 895, Short.MAX_VALUE)
+            .addComponent(jScrollPane15, javax.swing.GroupLayout.DEFAULT_SIZE, 878, Short.MAX_VALUE)
         );
         jPanel15Layout.setVerticalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -385,7 +385,7 @@ PreparedStatement pst=null;
         jPanel16.setLayout(jPanel16Layout);
         jPanel16Layout.setHorizontalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane16, javax.swing.GroupLayout.DEFAULT_SIZE, 895, Short.MAX_VALUE)
+            .addComponent(jScrollPane16, javax.swing.GroupLayout.DEFAULT_SIZE, 878, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel16Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(Delete_table_three4)
@@ -463,7 +463,7 @@ PreparedStatement pst=null;
         jPanel17.setLayout(jPanel17Layout);
         jPanel17Layout.setHorizontalGroup(
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane17, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 895, Short.MAX_VALUE)
+            .addComponent(jScrollPane17, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 878, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -480,7 +480,7 @@ PreparedStatement pst=null;
                 .addGroup(jPanel17Layout.createSequentialGroup()
                     .addGap(421, 421, 421)
                     .addComponent(Delete_table_three5)
-                    .addContainerGap(411, Short.MAX_VALUE)))
+                    .addContainerGap(394, Short.MAX_VALUE)))
         );
         jPanel17Layout.setVerticalGroup(
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -529,22 +529,23 @@ PreparedStatement pst=null;
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(18, 18, 18)
+                .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(14, 14, 14)
                 .addComponent(jTabbedPane14)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(132, 132, 132))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addComponent(jTabbedPane14, javax.swing.GroupLayout.PREFERRED_SIZE, 545, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addComponent(jTabbedPane14, javax.swing.GroupLayout.PREFERRED_SIZE, 545, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(180, 180, 180)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(170, Short.MAX_VALUE))
         );
 
         pack();
@@ -848,40 +849,14 @@ PreparedStatement pst=null;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Delete_table_four;
     private javax.swing.JButton Delete_table_four1;
-    private javax.swing.JButton Delete_table_three;
-    private javax.swing.JButton Delete_table_three1;
-    private javax.swing.JButton Delete_table_three2;
-    private javax.swing.JButton Delete_table_three3;
     private javax.swing.JButton Delete_table_three4;
     private javax.swing.JButton Delete_table_three5;
-    private javax.swing.JButton Delete_table_two;
-    private javax.swing.JButton Delete_table_two1;
-    private javax.swing.JButton Delete_table_two2;
-    private javax.swing.JButton Delete_table_two3;
-    private javax.swing.JButton Delete_table_two4;
-    private javax.swing.JButton Delete_table_two5;
-    private javax.swing.JButton Delete_table_two6;
-    private javax.swing.JButton Delete_table_two7;
-    private javax.swing.JButton Delete_table_two8;
     private javax.swing.JButton Delete_table_two9;
     private javax.swing.JTextField Gr_no;
     private javax.swing.JTextField Phone_no;
     private javax.swing.JButton Print_table_four;
     private javax.swing.JButton Print_table_four1;
-    private javax.swing.JButton Print_table_three;
-    private javax.swing.JButton Print_table_three1;
-    private javax.swing.JButton Print_table_three2;
-    private javax.swing.JButton Print_table_three3;
     private javax.swing.JButton Print_table_three4;
-    private javax.swing.JButton Print_table_two;
-    private javax.swing.JButton Print_table_two1;
-    private javax.swing.JButton Print_table_two2;
-    private javax.swing.JButton Print_table_two3;
-    private javax.swing.JButton Print_table_two4;
-    private javax.swing.JButton Print_table_two5;
-    private javax.swing.JButton Print_table_two6;
-    private javax.swing.JButton Print_table_two7;
-    private javax.swing.JButton Print_table_two8;
     private javax.swing.JButton Print_table_two9;
     private javax.swing.JButton Update_cmd;
     private javax.swing.JTextField address_txt;
@@ -896,72 +871,20 @@ PreparedStatement pst=null;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel10;
-    private javax.swing.JPanel jPanel11;
-    private javax.swing.JPanel jPanel12;
-    private javax.swing.JPanel jPanel13;
-    private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel17;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane10;
-    private javax.swing.JScrollPane jScrollPane11;
-    private javax.swing.JScrollPane jScrollPane12;
-    private javax.swing.JScrollPane jScrollPane13;
-    private javax.swing.JScrollPane jScrollPane14;
     private javax.swing.JScrollPane jScrollPane15;
     private javax.swing.JScrollPane jScrollPane16;
     private javax.swing.JScrollPane jScrollPane17;
     private javax.swing.JScrollPane jScrollPane18;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JScrollPane jScrollPane7;
-    private javax.swing.JScrollPane jScrollPane8;
-    private javax.swing.JScrollPane jScrollPane9;
-    private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTabbedPane jTabbedPane10;
-    private javax.swing.JTabbedPane jTabbedPane11;
-    private javax.swing.JTabbedPane jTabbedPane12;
-    private javax.swing.JTabbedPane jTabbedPane13;
     private javax.swing.JTabbedPane jTabbedPane14;
-    private javax.swing.JTabbedPane jTabbedPane2;
-    private javax.swing.JTabbedPane jTabbedPane3;
-    private javax.swing.JTabbedPane jTabbedPane4;
-    private javax.swing.JTabbedPane jTabbedPane5;
-    private javax.swing.JTabbedPane jTabbedPane6;
-    private javax.swing.JTabbedPane jTabbedPane7;
-    private javax.swing.JTabbedPane jTabbedPane8;
-    private javax.swing.JTabbedPane jTabbedPane9;
     private javax.swing.JTextField name_txt;
     private javax.swing.JTable show_table;
     private javax.swing.JTable table_four_info;
     private javax.swing.JTable table_one_info;
-    private javax.swing.JTable table_three;
-    private javax.swing.JTable table_three1;
-    private javax.swing.JTable table_three2;
-    private javax.swing.JTable table_three3;
     private javax.swing.JTable table_three_info;
-    private javax.swing.JTable table_two;
-    private javax.swing.JTable table_two1;
-    private javax.swing.JTable table_two2;
-    private javax.swing.JTable table_two3;
-    private javax.swing.JTable table_two4;
-    private javax.swing.JTable table_two5;
-    private javax.swing.JTable table_two6;
-    private javax.swing.JTable table_two7;
-    private javax.swing.JTable table_two8;
     private javax.swing.JTable table_two_info;
     // End of variables declaration//GEN-END:variables
 }
