@@ -266,7 +266,12 @@ PreparedStatement pst=null;
     }//GEN-LAST:event_birth_txtAncestorAdded
 
     private void add_cmdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add_cmdActionPerformed
-       String temp =class_txt.getSelectedItem().toString();
+    
+     
+        String temp =class_txt.getSelectedItem().toString();
+        if (temp=="Select Class"){
+            JOptionPane.showMessageDialog(null, "Please First Select Class");
+        }else{
         try{
            String sql= "Insert into addmition (G_R_Number,Class,Name,F_name,Fee,Phone_number,Address,Date_of_birth) values(?,?,?,?,?,?,?,?)";
            pst=conn.prepareStatement(sql);
@@ -284,6 +289,7 @@ PreparedStatement pst=null;
         JOptionPane.showMessageDialog(null, e);
         
     }
+        }
     }//GEN-LAST:event_add_cmdActionPerformed
 
     private void address_txtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_address_txtActionPerformed
@@ -307,6 +313,9 @@ PreparedStatement pst=null;
 
     private void class_txtPopupMenuWillBecomeInvisible(javax.swing.event.PopupMenuEvent evt) {//GEN-FIRST:event_class_txtPopupMenuWillBecomeInvisible
       String combo=(String) class_txt.getSelectedItem();
+      if(combo=="Select Class"){
+          Gr_no.setText(" ");
+      }
       if(combo=="9th"){
           Gr_no.setText("A");
       }
