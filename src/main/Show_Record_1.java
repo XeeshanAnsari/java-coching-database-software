@@ -35,8 +35,35 @@ PreparedStatement pst=null;
            show_table.setModel(DbUtils.resultSetToTableModel(rs));
        } catch(Exception e){
            JOptionPane.showMessageDialog(null, e);
+           }
+         try{
+           String sql="Select * from addmition  where Class='10th'";
+           pst=conn.prepareStatement(sql);
+           rs=pst.executeQuery();
+           table_two.setModel(DbUtils.resultSetToTableModel(rs));
+       } catch(Exception e){
+           JOptionPane.showMessageDialog(null, e);
            
-       }
+       } 
+        try{
+           String sql="Select * from addmition  where Class='1st year'";
+           pst=conn.prepareStatement(sql);
+           rs=pst.executeQuery();
+           table_three.setModel(DbUtils.resultSetToTableModel(rs));
+       } catch(Exception e){
+           JOptionPane.showMessageDialog(null, e);
+           
+       } 
+         try{
+           String sql="Select * from addmition  where Class='2nd year'";
+           pst=conn.prepareStatement(sql);
+           rs=pst.executeQuery();
+           table_four.setModel(DbUtils.resultSetToTableModel(rs));
+       } catch(Exception e){
+           JOptionPane.showMessageDialog(null, e);
+           
+       } 
+       
     }
 
     /**
@@ -53,14 +80,18 @@ PreparedStatement pst=null;
         jScrollPane2 = new javax.swing.JScrollPane();
         table_two = new javax.swing.JTable();
         Print_table_two = new javax.swing.JButton();
+        Delete_table_two = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         table_three = new javax.swing.JTable();
         Print_table_three = new javax.swing.JButton();
+        Delete_table_three = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
         table_four = new javax.swing.JTable();
         Print_table_four = new javax.swing.JButton();
+        Delete_table_three1 = new javax.swing.JButton();
+        Delete_table_four = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         show_table = new javax.swing.JTable();
 
@@ -97,12 +128,21 @@ PreparedStatement pst=null;
             }
         });
 
+        Delete_table_two.setText("Delete");
+        Delete_table_two.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Delete_table_twoActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(840, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Delete_table_two)
+                .addGap(18, 18, 18)
                 .addComponent(Print_table_two)
                 .addContainerGap())
             .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 905, Short.MAX_VALUE)
@@ -112,7 +152,9 @@ PreparedStatement pst=null;
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(Print_table_two)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Print_table_two)
+                    .addComponent(Delete_table_two))
                 .addGap(0, 8, Short.MAX_VALUE))
         );
 
@@ -138,6 +180,13 @@ PreparedStatement pst=null;
             }
         });
 
+        Delete_table_three.setText("Delete");
+        Delete_table_three.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Delete_table_threeActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -145,6 +194,8 @@ PreparedStatement pst=null;
             .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 905, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Delete_table_three)
+                .addGap(18, 18, 18)
                 .addComponent(Print_table_three)
                 .addContainerGap())
         );
@@ -153,7 +204,9 @@ PreparedStatement pst=null;
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(Print_table_three)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Print_table_three)
+                    .addComponent(Delete_table_three))
                 .addGap(0, 8, Short.MAX_VALUE))
         );
 
@@ -179,6 +232,20 @@ PreparedStatement pst=null;
             }
         });
 
+        Delete_table_three1.setText("Delete");
+        Delete_table_three1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Delete_table_three1ActionPerformed(evt);
+            }
+        });
+
+        Delete_table_four.setText("Delete");
+        Delete_table_four.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Delete_table_fourActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -186,16 +253,30 @@ PreparedStatement pst=null;
             .addComponent(jScrollPane4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 905, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Delete_table_four)
+                .addGap(18, 18, 18)
                 .addComponent(Print_table_four)
                 .addContainerGap())
+            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGap(421, 421, 421)
+                    .addComponent(Delete_table_three1)
+                    .addContainerGap(421, Short.MAX_VALUE)))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(Print_table_four)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Print_table_four)
+                    .addComponent(Delete_table_four))
                 .addGap(0, 8, Short.MAX_VALUE))
+            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGap(244, 244, 244)
+                    .addComponent(Delete_table_three1)
+                    .addContainerGap(245, Short.MAX_VALUE)))
         );
 
         jTabbedPane1.addTab("2nd Year", jPanel3);
@@ -228,7 +309,7 @@ PreparedStatement pst=null;
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(40, Short.MAX_VALUE)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27))
         );
 
@@ -238,33 +319,7 @@ PreparedStatement pst=null;
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTabbedPane1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane1MouseClicked
-       try{
-           String sql="Select * from addmition  where Class='10th'";
-           pst=conn.prepareStatement(sql);
-           rs=pst.executeQuery();
-           table_two.setModel(DbUtils.resultSetToTableModel(rs));
-       } catch(Exception e){
-           JOptionPane.showMessageDialog(null, e);
-           
-       } 
-        try{
-           String sql="Select * from addmition  where Class='1st year'";
-           pst=conn.prepareStatement(sql);
-           rs=pst.executeQuery();
-           table_three.setModel(DbUtils.resultSetToTableModel(rs));
-       } catch(Exception e){
-           JOptionPane.showMessageDialog(null, e);
-           
-       } 
-         try{
-           String sql="Select * from addmition  where Class='2nd year'";
-           pst=conn.prepareStatement(sql);
-           rs=pst.executeQuery();
-           table_four.setModel(DbUtils.resultSetToTableModel(rs));
-       } catch(Exception e){
-           JOptionPane.showMessageDialog(null, e);
-           
-       } 
+     
     }//GEN-LAST:event_jTabbedPane1MouseClicked
 
     private void jTabbedPane1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jTabbedPane1StateChanged
@@ -304,6 +359,56 @@ PreparedStatement pst=null;
       }
     }//GEN-LAST:event_Print_table_fourActionPerformed
 
+    private void Delete_table_twoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Delete_table_twoActionPerformed
+        
+         try{
+             String sql= "delete  from  addmition where G_R_number=? ";
+            int row =table_two.getSelectedRow();
+           String Tabel_click=(table_two.getModel().getValueAt(row, 0).toString()); 
+           pst=conn.prepareStatement(sql);
+           pst.setString(1,Tabel_click );
+           pst.execute();
+           JOptionPane.showMessageDialog(null," Deleted" );
+       }catch(Exception e){
+        JOptionPane.showMessageDialog(null, e);   
+    }
+         Update_table();
+    }//GEN-LAST:event_Delete_table_twoActionPerformed
+
+    private void Delete_table_threeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Delete_table_threeActionPerformed
+           try{
+             String sql= "delete  from  addmition where G_R_number=? ";
+            int row =table_three.getSelectedRow();
+           String Tabel_click=(table_three.getModel().getValueAt(row, 0).toString()); 
+           pst=conn.prepareStatement(sql);
+           pst.setString(1,Tabel_click );
+           pst.execute();
+           JOptionPane.showMessageDialog(null," Deleted" );
+       }catch(Exception e){
+        JOptionPane.showMessageDialog(null, e);   
+    }
+         Update_table();
+    }//GEN-LAST:event_Delete_table_threeActionPerformed
+
+    private void Delete_table_three1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Delete_table_three1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Delete_table_three1ActionPerformed
+
+    private void Delete_table_fourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Delete_table_fourActionPerformed
+        try{
+             String sql= "delete  from  addmition where G_R_number=? ";
+            int row =table_four.getSelectedRow();
+           String Tabel_click=(table_four.getModel().getValueAt(row, 0).toString()); 
+           pst=conn.prepareStatement(sql);
+           pst.setString(1,Tabel_click );
+           pst.execute();
+           JOptionPane.showMessageDialog(null," Deleted" );
+       }catch(Exception e){
+        JOptionPane.showMessageDialog(null, e);   
+    }
+         Update_table();
+    }//GEN-LAST:event_Delete_table_fourActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -334,12 +439,16 @@ PreparedStatement pst=null;
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Show_Record().setVisible(true);
+                new Show_Record_1().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Delete_table_four;
+    private javax.swing.JButton Delete_table_three;
+    private javax.swing.JButton Delete_table_three1;
+    private javax.swing.JButton Delete_table_two;
     private javax.swing.JButton Print_table_four;
     private javax.swing.JButton Print_table_three;
     private javax.swing.JButton Print_table_two;
