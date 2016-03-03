@@ -7,6 +7,7 @@ package main;
 
 import javax.swing.*;
 import java.sql.*;
+import java.text.MessageFormat;
 import java.util.*;
 import net.proteanit.sql.DbUtils;
 
@@ -30,10 +31,37 @@ PreparedStatement pst =null;
     }
     private void Update_table(){
        try{
-           String sql="Select * from Fee_inform";
+           String sql="Select * from Fee_inform where Class='9th'";
            pst=conn.prepareStatement(sql);
            rs=pst.executeQuery();
-           fee_table.setModel(DbUtils.resultSetToTableModel(rs));
+           fee_table_one.setModel(DbUtils.resultSetToTableModel(rs));
+       } catch(Exception e){
+           JOptionPane.showMessageDialog(null, e);
+           
+       }
+        try{
+           String sql="Select * from Fee_inform where Class='10th'";
+           pst=conn.prepareStatement(sql);
+           rs=pst.executeQuery();
+           fee_table_two.setModel(DbUtils.resultSetToTableModel(rs));
+       } catch(Exception e){
+           JOptionPane.showMessageDialog(null, e);
+           
+       }
+       try{
+           String sql="Select * from Fee_inform where Class='1st year'";
+           pst=conn.prepareStatement(sql);
+           rs=pst.executeQuery();
+           fee_table_three.setModel(DbUtils.resultSetToTableModel(rs));
+       } catch(Exception e){
+           JOptionPane.showMessageDialog(null, e);
+           
+       }
+       try{
+           String sql="Select * from Fee_inform where Class='2nd tear'";
+           pst=conn.prepareStatement(sql);
+           rs=pst.executeQuery();
+           fee_table_four.setModel(DbUtils.resultSetToTableModel(rs));
        } catch(Exception e){
            JOptionPane.showMessageDialog(null, e);
            
@@ -58,8 +86,6 @@ PreparedStatement pst =null;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        fee_table = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         name_txt = new javax.swing.JTextField();
@@ -75,21 +101,24 @@ PreparedStatement pst =null;
         Search_txt = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         save_cmd = new javax.swing.JButton();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        fee_table_one = new javax.swing.JTable();
+        jPanel1 = new javax.swing.JPanel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        fee_table_two = new javax.swing.JTable();
+        print_table_two = new javax.swing.JButton();
+        Delete_table_two = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        fee_table_three = new javax.swing.JTable();
+        Print_table_three = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        fee_table_four = new javax.swing.JTable();
+        Print_table_four = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-
-        fee_table.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        jScrollPane1.setViewportView(fee_table);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setText("Student Name");
 
@@ -125,6 +154,167 @@ PreparedStatement pst =null;
                 save_cmdActionPerformed(evt);
             }
         });
+
+        jTabbedPane1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTabbedPane1MouseClicked(evt);
+            }
+        });
+
+        fee_table_one.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(fee_table_one);
+
+        jTabbedPane1.addTab("9th", jScrollPane1);
+
+        fee_table_two.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane4.setViewportView(fee_table_two);
+
+        print_table_two.setText("Print");
+        print_table_two.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                print_table_twoActionPerformed(evt);
+            }
+        });
+
+        Delete_table_two.setText("Delete");
+        Delete_table_two.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Delete_table_twoActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Delete_table_two)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(print_table_two)
+                .addContainerGap())
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 445, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(print_table_two)
+                    .addComponent(Delete_table_two))
+                .addGap(0, 23, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("10th", jPanel1);
+
+        fee_table_three.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane3.setViewportView(fee_table_three);
+
+        Print_table_three.setText("Print");
+        Print_table_three.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Print_table_threeActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Print_table_three)
+                .addContainerGap())
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 446, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(Print_table_three)
+                .addGap(22, 22, 22))
+        );
+
+        jTabbedPane1.addTab("1st year", jPanel2);
+
+        fee_table_four.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane2.setViewportView(fee_table_four);
+
+        Print_table_four.setText("Print");
+        Print_table_four.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Print_table_fourActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Print_table_four)
+                .addContainerGap())
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 445, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(Print_table_four)
+                .addGap(23, 23, 23))
+        );
+
+        jTabbedPane1.addTab("2nd year", jPanel3);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -164,47 +354,48 @@ PreparedStatement pst =null;
                     .addGroup(layout.createSequentialGroup()
                         .addGap(38, 38, 38)
                         .addComponent(save_cmd)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(36, 36, 36)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(Search_txt, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(34, 34, 34)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(Search_txt, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(34, 34, 34)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(gr_no, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(class_txt)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(15, 15, 15)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(name_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(fee_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(15, 15, 15)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(month_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(15, 15, 15)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(date_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(53, 53, 53)
-                        .addComponent(save_cmd)))
-                .addContainerGap(38, Short.MAX_VALUE))
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(gr_no, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(class_txt)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(15, 15, 15)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(name_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(fee_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(15, 15, 15)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(month_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(15, 15, 15)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(date_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(53, 53, 53)
+                .addComponent(save_cmd)
+                .addContainerGap(174, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         pack();
@@ -229,14 +420,47 @@ PreparedStatement pst =null;
                 class_txt.setText(add3);
                 String add4=rs.getString("Fee");
                 fee_txt.setText(add4);
-                
-                
             }
-                   
-            
         }catch(Exception e){
             JOptionPane.showMessageDialog(null, e);
         }
+            try{
+            String sql="Select * from addmition where Name=?";
+            pst= conn.prepareStatement(sql);
+            pst.setString(1, Search_txt.getText());
+            rs=pst.executeQuery();
+            if (rs.next()){
+                String add1=rs.getString("G_R_Number");
+                gr_no.setText(add1);
+                String add2=rs.getString("Name");
+                name_txt.setText(add2);
+                String add3=rs.getString("Class");
+                class_txt.setText(add3);
+                String add4=rs.getString("Fee");
+                fee_txt.setText(add4);
+                 }
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }
+            try{
+            String sql="Select * from addmition where Class=?";
+            pst= conn.prepareStatement(sql);
+            pst.setString(1, Search_txt.getText());
+            rs=pst.executeQuery();
+            if (rs.next()){
+                String add1=rs.getString("G_R_Number");
+                gr_no.setText(add1);
+                String add2=rs.getString("Name");
+                name_txt.setText(add2);
+                String add3=rs.getString("Class");
+                class_txt.setText(add3);
+                String add4=rs.getString("Fee");
+                fee_txt.setText(add4);
+                 }
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }
+           
     }//GEN-LAST:event_Search_txtKeyReleased
 
     private void save_cmdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_save_cmdActionPerformed
@@ -256,6 +480,59 @@ PreparedStatement pst =null;
         }   
         Update_table();
     }//GEN-LAST:event_save_cmdActionPerformed
+
+    private void jTabbedPane1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane1MouseClicked
+      
+    }//GEN-LAST:event_jTabbedPane1MouseClicked
+
+    private void print_table_twoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_print_table_twoActionPerformed
+     MessageFormat header =new MessageFormat("Report Print");
+     MessageFormat footer =new MessageFormat("page{0,number,integer}");
+        try{
+          fee_table_two.print(JTable.PrintMode.NORMAL,header,footer);
+      }catch(java.awt.print.PrinterException e){
+          
+          System.err.format("connot Print %s%n", e.getMessage());
+      }
+    }//GEN-LAST:event_print_table_twoActionPerformed
+
+    private void Print_table_threeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Print_table_threeActionPerformed
+     MessageFormat header =new MessageFormat("Report Print");
+     MessageFormat footer =new MessageFormat("page{0,number,integer}");
+        try{
+          fee_table_three.print(JTable.PrintMode.NORMAL,header,footer);
+      }catch(java.awt.print.PrinterException e){
+          
+          System.err.format("connot Print %s%n", e.getMessage());
+      }
+    }//GEN-LAST:event_Print_table_threeActionPerformed
+
+    private void Print_table_fourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Print_table_fourActionPerformed
+     MessageFormat header =new MessageFormat("Report Print");
+     MessageFormat footer =new MessageFormat("page{0,number,integer}");
+        try{
+          fee_table_four.print(JTable.PrintMode.NORMAL,header,footer);
+      }catch(java.awt.print.PrinterException e){
+          
+          System.err.format("connot Print %s%n", e.getMessage());
+      }
+    }//GEN-LAST:event_Print_table_fourActionPerformed
+
+    private void Delete_table_twoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Delete_table_twoActionPerformed
+         
+         try{
+             String sql= "delete  from   Fee_inform where G_R_number=?";
+             int row =fee_table_two.getSelectedRow();
+           String Tabel_click=(fee_table_two.getModel().getValueAt(row, 0).toString());
+           pst=conn.prepareStatement(sql);
+           pst.setString(1, Tabel_click);
+           pst.execute();
+           JOptionPane.showMessageDialog(null," Deleted" );
+       }catch(Exception e){
+        JOptionPane.showMessageDialog(null, e);   
+    }
+        Update_table();   
+    }//GEN-LAST:event_Delete_table_twoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -283,6 +560,7 @@ PreparedStatement pst =null;
             java.util.logging.Logger.getLogger(fee_info.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -293,10 +571,16 @@ PreparedStatement pst =null;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Delete_table_two;
+    private javax.swing.JButton Print_table_four;
+    private javax.swing.JButton Print_table_three;
     private javax.swing.JTextField Search_txt;
     private javax.swing.JTextField class_txt;
     private javax.swing.JTextField date_txt;
-    private javax.swing.JTable fee_table;
+    private javax.swing.JTable fee_table_four;
+    private javax.swing.JTable fee_table_one;
+    private javax.swing.JTable fee_table_three;
+    private javax.swing.JTable fee_table_two;
     private javax.swing.JTextField fee_txt;
     private javax.swing.JTextField gr_no;
     private javax.swing.JLabel jLabel1;
@@ -306,9 +590,17 @@ PreparedStatement pst =null;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JComboBox<String> month_txt;
     private javax.swing.JTextField name_txt;
+    private javax.swing.JButton print_table_two;
     private javax.swing.JButton save_cmd;
     // End of variables declaration//GEN-END:variables
 }
