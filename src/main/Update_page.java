@@ -105,12 +105,23 @@ PreparedStatement pst=null;
         jScrollPane17 = new javax.swing.JScrollPane();
         table_four_info = new javax.swing.JTable();
         Print_table_four = new javax.swing.JButton();
-        Delete_table_three5 = new javax.swing.JButton();
         Delete_table_four = new javax.swing.JButton();
         Delete_table_four1 = new javax.swing.JButton();
         Print_table_four1 = new javax.swing.JButton();
         jScrollPane18 = new javax.swing.JScrollPane();
         table_one_info = new javax.swing.JTable();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItem6 = new javax.swing.JMenuItem();
+        jSeparator2 = new javax.swing.JPopupMenu.Separator();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jSeparator1 = new javax.swing.JPopupMenu.Separator();
+        jMenuItem4 = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        jMenuItem5 = new javax.swing.JMenuItem();
+        jMenu3 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
 
         show_table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -126,6 +137,7 @@ PreparedStatement pst=null;
         jScrollPane1.setViewportView(show_table);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Update Page");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Addmition Form", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Sylfaen", 1, 18), new java.awt.Color(51, 51, 255))); // NOI18N
 
@@ -281,6 +293,7 @@ PreparedStatement pst=null;
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jTabbedPane14.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
         jTabbedPane14.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 jTabbedPane14StateChanged(evt);
@@ -292,6 +305,7 @@ PreparedStatement pst=null;
             }
         });
 
+        Print_table_two9.setFont(new java.awt.Font("Sitka Small", 1, 12)); // NOI18N
         Print_table_two9.setText("Print");
         Print_table_two9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -299,6 +313,7 @@ PreparedStatement pst=null;
             }
         });
 
+        Delete_table_two9.setFont(new java.awt.Font("Sitka Small", 1, 12)); // NOI18N
         Delete_table_two9.setText("Delete");
         Delete_table_two9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -329,7 +344,7 @@ PreparedStatement pst=null;
         jPanel15Layout.setHorizontalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
-                .addContainerGap(732, Short.MAX_VALUE)
+                .addContainerGap(712, Short.MAX_VALUE)
                 .addComponent(Delete_table_two9)
                 .addGap(18, 18, 18)
                 .addComponent(Print_table_two9)
@@ -344,7 +359,7 @@ PreparedStatement pst=null;
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Print_table_two9)
                     .addComponent(Delete_table_two9))
-                .addGap(0, 13, Short.MAX_VALUE))
+                .addGap(0, 22, Short.MAX_VALUE))
         );
 
         jTabbedPane14.addTab("Class 10th", jPanel15);
@@ -367,6 +382,7 @@ PreparedStatement pst=null;
         });
         jScrollPane16.setViewportView(table_three_info);
 
+        Print_table_three4.setFont(new java.awt.Font("Sitka Small", 1, 12)); // NOI18N
         Print_table_three4.setText("Print");
         Print_table_three4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -374,6 +390,7 @@ PreparedStatement pst=null;
             }
         });
 
+        Delete_table_three4.setFont(new java.awt.Font("Sitka Small", 1, 12)); // NOI18N
         Delete_table_three4.setText("Delete");
         Delete_table_three4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -431,13 +448,6 @@ PreparedStatement pst=null;
             }
         });
 
-        Delete_table_three5.setText("Delete");
-        Delete_table_three5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Delete_table_three5ActionPerformed(evt);
-            }
-        });
-
         Delete_table_four.setText("Delete");
         Delete_table_four.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -445,6 +455,7 @@ PreparedStatement pst=null;
             }
         });
 
+        Delete_table_four1.setFont(new java.awt.Font("Sitka Small", 1, 12)); // NOI18N
         Delete_table_four1.setText("Delete");
         Delete_table_four1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -452,6 +463,7 @@ PreparedStatement pst=null;
             }
         });
 
+        Print_table_four1.setFont(new java.awt.Font("Sitka Small", 1, 12)); // NOI18N
         Print_table_four1.setText("Print");
         Print_table_four1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -476,11 +488,6 @@ PreparedStatement pst=null;
                         .addGap(18, 18, 18)
                         .addComponent(Print_table_four1)))
                 .addContainerGap())
-            .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel17Layout.createSequentialGroup()
-                    .addGap(421, 421, 421)
-                    .addComponent(Delete_table_three5)
-                    .addContainerGap(394, Short.MAX_VALUE)))
         );
         jPanel17Layout.setVerticalGroup(
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -495,11 +502,6 @@ PreparedStatement pst=null;
                     .addComponent(Print_table_four)
                     .addComponent(Delete_table_four))
                 .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel17Layout.createSequentialGroup()
-                    .addGap(244, 244, 244)
-                    .addComponent(Delete_table_three5)
-                    .addContainerGap(314, Short.MAX_VALUE)))
         );
 
         jTabbedPane14.addTab("2nd Year", jPanel17);
@@ -524,28 +526,99 @@ PreparedStatement pst=null;
 
         jTabbedPane14.addTab("Class 9th", jScrollPane18);
 
+        jMenu1.setText("File");
+
+        jMenuItem6.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem6.setText("Addmition");
+        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem6ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem6);
+        jMenu1.add(jSeparator2);
+
+        jMenuItem3.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem3.setText("LogOut");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem3);
+        jMenu1.add(jSeparator1);
+
+        jMenuItem4.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem4.setText("Exit");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem4);
+
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Edit");
+
+        jMenuItem5.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_U, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem5.setText("Update");
+        jMenuItem5.setEnabled(false);
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem5ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem5);
+
+        jMenuBar1.add(jMenu2);
+
+        jMenu3.setText("view");
+
+        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem1.setText("Show Record");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem1);
+
+        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem2.setText("Fee Page");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem2);
+
+        jMenuBar1.add(jMenu3);
+
+        setJMenuBar(jMenuBar1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(6, 6, 6)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jTabbedPane14)
-                .addContainerGap())
+                .addGap(18, 18, 18))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap(87, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addComponent(jTabbedPane14, javax.swing.GroupLayout.PREFERRED_SIZE, 545, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(180, 180, 180)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(170, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jTabbedPane14, javax.swing.GroupLayout.PREFERRED_SIZE, 559, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(83, 83, 83))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(144, 144, 144))))
         );
 
         pack();
@@ -658,10 +731,6 @@ PreparedStatement pst=null;
             System.err.format("connot Print %s%n", e.getMessage());
         }
     }//GEN-LAST:event_Print_table_fourActionPerformed
-
-    private void Delete_table_three5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Delete_table_three5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Delete_table_three5ActionPerformed
 
     private void Delete_table_fourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Delete_table_fourActionPerformed
         try{
@@ -811,6 +880,35 @@ PreparedStatement pst=null;
        }
     }//GEN-LAST:event_table_one_infoMouseClicked
 
+    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+        Addnition_page add=new Addnition_page();
+        add.setVisible(true);
+    }//GEN-LAST:event_jMenuItem6ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        Login_page log =new Login_page();
+        log.setVisible(true);
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+        Update_page u= new Update_page();
+        u.setVisible(true);
+    }//GEN-LAST:event_jMenuItem5ActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        Show_Record_1 s= new Show_Record_1();
+        s.setVisible(true);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        fee_info f= new fee_info();
+        f.setVisible(true);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -850,7 +948,6 @@ PreparedStatement pst=null;
     private javax.swing.JButton Delete_table_four;
     private javax.swing.JButton Delete_table_four1;
     private javax.swing.JButton Delete_table_three4;
-    private javax.swing.JButton Delete_table_three5;
     private javax.swing.JButton Delete_table_two9;
     private javax.swing.JTextField Gr_no;
     private javax.swing.JTextField Phone_no;
@@ -870,6 +967,16 @@ PreparedStatement pst=null;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
@@ -879,6 +986,8 @@ PreparedStatement pst=null;
     private javax.swing.JScrollPane jScrollPane16;
     private javax.swing.JScrollPane jScrollPane17;
     private javax.swing.JScrollPane jScrollPane18;
+    private javax.swing.JPopupMenu.Separator jSeparator1;
+    private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JTabbedPane jTabbedPane14;
     private javax.swing.JTextField name_txt;
     private javax.swing.JTable show_table;
