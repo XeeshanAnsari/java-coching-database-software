@@ -42,7 +42,11 @@ PreparedStatement pst =null;
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Login");
         setBackground(new java.awt.Color(0, 204, 204));
+        setLocation(new java.awt.Point(250, 200));
+        setMaximumSize(new java.awt.Dimension(780, 380));
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Login", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 18), new java.awt.Color(0, 0, 204))); // NOI18N
@@ -106,7 +110,7 @@ PreparedStatement pst =null;
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 30, 260, 270));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Background_Form.jpg"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 780, 380));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 380));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -123,7 +127,7 @@ PreparedStatement pst =null;
                 rs.close();
                 pst.close();
                 dispose();
-                main s=new main();
+                Addnition_page s=new Addnition_page();
                 s.setVisible(true);
             }else{
                 JOptionPane.showMessageDialog(null,"Usaername and passwors is not Correct" );
