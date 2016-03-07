@@ -100,13 +100,13 @@ PreparedStatement pst =null;
                 .addContainerGap(26, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 110, -1, 170));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, -1, 170));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon("F:\\Wallpapers\\wallpaper\\password-icon-wallpaper-3.jpg")); // NOI18N
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 30, 270, 270));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/lock_logo.png"))); // NOI18N
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 30, 260, 270));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/alider-background.jpg"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 780, 370));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Background_Form.jpg"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 780, 380));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
