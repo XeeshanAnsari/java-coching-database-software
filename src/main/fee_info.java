@@ -121,6 +121,7 @@ PreparedStatement pst =null;
         jLabel6 = new javax.swing.JLabel();
         class_txt = new javax.swing.JTextField();
         fee_txt = new javax.swing.JTextField();
+        Clear_cmd = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         Search_txt = new javax.swing.JTextField();
@@ -395,6 +396,13 @@ PreparedStatement pst =null;
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel6.setText("Month");
 
+        Clear_cmd.setText("Clear");
+        Clear_cmd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Clear_cmdActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
@@ -426,6 +434,8 @@ PreparedStatement pst =null;
                                     .addComponent(gr_no)))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Clear_cmd)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(save_cmd)))
                 .addContainerGap())
         );
@@ -457,7 +467,9 @@ PreparedStatement pst =null;
                     .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(date_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(save_cmd)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(save_cmd)
+                    .addComponent(Clear_cmd))
                 .addContainerGap())
         );
 
@@ -483,9 +495,9 @@ PreparedStatement pst =null;
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                 .addComponent(Search_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25))
+                .addGap(19, 19, 19))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -497,7 +509,7 @@ PreparedStatement pst =null;
                 .addContainerGap())
         );
 
-        getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(75, 127, -1, -1));
+        getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(75, 127, 270, -1));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Background_Form.jpg"))); // NOI18N
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 730));
@@ -781,6 +793,15 @@ PreparedStatement pst =null;
         Update_table();  
     }//GEN-LAST:event_Delete_table_threeActionPerformed
 
+    private void Clear_cmdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Clear_cmdActionPerformed
+       gr_no.setText("");
+       class_txt.setText("");
+       name_txt.setText("");
+       fee_txt.setText("");
+       Search_txt.setText("");
+       
+    }//GEN-LAST:event_Clear_cmdActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -818,6 +839,7 @@ PreparedStatement pst =null;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Clear_cmd;
     private javax.swing.JButton Delete_table_four;
     private javax.swing.JButton Delete_table_three;
     private javax.swing.JButton Delete_table_two;

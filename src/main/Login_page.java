@@ -105,7 +105,7 @@ PreparedStatement pst =null;
         jLabel4.setIcon(new javax.swing.ImageIcon("F:\\Wallpapers\\wallpaper\\password-icon-wallpaper-3.jpg")); // NOI18N
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 30, 270, 270));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("F:\\Wallpapers\\wallpaper\\alider-background-blank-2.jpg")); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/alider-background.jpg"))); // NOI18N
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 780, 370));
 
         pack();

@@ -90,6 +90,7 @@ PreparedStatement pst=null;
         jLabel1 = new javax.swing.JLabel();
         f_name_txt = new javax.swing.JTextField();
         name_txt = new javax.swing.JTextField();
+        Clear_cmd = new javax.swing.JButton();
         jTabbedPane14 = new javax.swing.JTabbedPane();
         jPanel15 = new javax.swing.JPanel();
         Print_table_two9 = new javax.swing.JButton();
@@ -209,6 +210,14 @@ PreparedStatement pst=null;
 
         name_txt.setFont(new java.awt.Font("Segoe UI Semilight", 0, 14)); // NOI18N
 
+        Clear_cmd.setFont(new java.awt.Font("Sitka Display", 1, 14)); // NOI18N
+        Clear_cmd.setText("Clear");
+        Clear_cmd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Clear_cmdActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -252,6 +261,8 @@ PreparedStatement pst=null;
                         .addComponent(address_txt))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(Clear_cmd, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(Update_cmd)))
                 .addContainerGap())
         );
@@ -292,11 +303,17 @@ PreparedStatement pst=null;
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(address_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(Update_cmd)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(Update_cmd)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addComponent(Clear_cmd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 317, 560, -1));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, 560, -1));
 
         jTabbedPane14.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
         jTabbedPane14.addChangeListener(new javax.swing.event.ChangeListener() {
@@ -906,6 +923,17 @@ PreparedStatement pst=null;
         dispose();
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
+    private void Clear_cmdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Clear_cmdActionPerformed
+    
+               Gr_no.setText("");
+               class_txt.setSelectedItem("Select Class");
+               name_txt.setText("");
+               f_name_txt.setText("");
+               fee_txt.setText("");
+               Phone_no.setText("");
+               address_txt.setText("");
+    }//GEN-LAST:event_Clear_cmdActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -942,6 +970,7 @@ PreparedStatement pst=null;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Clear_cmd;
     private javax.swing.JButton Delete_table_four;
     private javax.swing.JButton Delete_table_four1;
     private javax.swing.JButton Delete_table_three4;
