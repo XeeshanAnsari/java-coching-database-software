@@ -19,7 +19,7 @@ public class Connect_database {
         try {
             Class.forName("org.sqlite.JDBC");
             Connection conn=DriverManager.getConnection("jdbc:sqlite:database.sqlite");
-            JOptionPane.showMessageDialog(null, "connection "); 
+            /*JOptionPane.showMessageDialog(null, "connection "); */
             return conn;
             
         } catch (Exception e) {
