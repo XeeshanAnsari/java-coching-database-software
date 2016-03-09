@@ -37,8 +37,18 @@ PreparedStatement pst =null;
            fee_table_one.setModel(DbUtils.resultSetToTableModel(rs));
        } catch(Exception e){
            JOptionPane.showMessageDialog(null, e);
-           
-       }
+           }finally{
+          try{
+              rs.close();
+              pst.close();
+             }catch(Exception e){
+                           }
+            }
+       
+       
+       
+       
+       
         try{
            String sql="Select * from Fee_inform where Class='10th'";
            pst=conn.prepareStatement(sql);
@@ -46,17 +56,36 @@ PreparedStatement pst =null;
            fee_table_two.setModel(DbUtils.resultSetToTableModel(rs));
        } catch(Exception e){
            JOptionPane.showMessageDialog(null, e);
-           
-       }
-       try{
+           }finally{
+          try{
+              rs.close();
+              pst.close();
+             }catch(Exception e){
+                           }
+            }
+       
+        
+        
+        
+        try{
            String sql="Select * from Fee_inform where Class='1st year'";
            pst=conn.prepareStatement(sql);
            rs=pst.executeQuery();
            fee_table_three.setModel(DbUtils.resultSetToTableModel(rs));
        } catch(Exception e){
            JOptionPane.showMessageDialog(null, e);
-           
-       }
+           }finally{
+          try{
+              rs.close();
+              pst.close();
+             }catch(Exception e){
+                           }
+            }
+        
+        
+        
+        
+       
        try{
            String sql="Select * from Fee_inform where Class='2nd tear'";
            pst=conn.prepareStatement(sql);
@@ -65,7 +94,13 @@ PreparedStatement pst =null;
        } catch(Exception e){
            JOptionPane.showMessageDialog(null, e);
            
-       }
+       }finally{
+          try{
+              rs.close();
+              pst.close();
+             }catch(Exception e){
+                           }
+            }
     }
      
     public void CurrentDate(){
@@ -611,7 +646,16 @@ PreparedStatement pst =null;
             }
         }catch(Exception e){
             JOptionPane.showMessageDialog(null, e);
-        }
+        }finally{
+          try{
+              rs.close();
+              pst.close();
+             }catch(Exception e){
+                           }
+            }
+        
+        
+        
             try{
             String sql="Select * from addmition where Name=?";
             pst= conn.prepareStatement(sql);
@@ -629,7 +673,18 @@ PreparedStatement pst =null;
                  }
         }catch(Exception e){
             JOptionPane.showMessageDialog(null, e);
-        }
+        }finally{
+          try{
+              rs.close();
+              pst.close();
+             }catch(Exception e){
+                           }
+            }
+            
+            
+            
+            
+            
             try{
             String sql="Select * from addmition where Class=?";
             pst= conn.prepareStatement(sql);
@@ -647,7 +702,13 @@ PreparedStatement pst =null;
                  }
         }catch(Exception e){
             JOptionPane.showMessageDialog(null, e);
-        }
+        }finally{
+          try{
+              rs.close();
+              pst.close();
+             }catch(Exception e){
+                           }
+            }
            
     }//GEN-LAST:event_Search_txtKeyReleased
 
@@ -665,7 +726,13 @@ PreparedStatement pst =null;
             pst.execute();
         }catch(Exception e){
             JOptionPane.showMessageDialog(null, e);
-        }   
+        }finally{
+          try{
+              rs.close();
+              pst.close();
+             }catch(Exception e){
+                           }
+            }   
         Update_table();
     }//GEN-LAST:event_save_cmdActionPerformed
 
@@ -711,7 +778,13 @@ PreparedStatement pst =null;
            JOptionPane.showMessageDialog(null," Deleted" );
        }catch(SQLException | HeadlessException e){
         JOptionPane.showMessageDialog(null, e);   
-    }
+    }finally{
+          try{
+              rs.close();
+              pst.close();
+             }catch(Exception e){
+                           }
+            }
         Update_table();   
     }//GEN-LAST:event_Delete_table_twoActionPerformed
 
@@ -765,7 +838,13 @@ PreparedStatement pst =null;
            JOptionPane.showMessageDialog(null," Deleted" );
        }catch(SQLException | HeadlessException e){
         JOptionPane.showMessageDialog(null, e);   
-    }
+    }finally{
+          try{
+              rs.close();
+              pst.close();
+             }catch(Exception e){
+                           }
+            }
         Update_table();
     }//GEN-LAST:event_Delete_table_fourActionPerformed
 
@@ -791,7 +870,13 @@ PreparedStatement pst =null;
            JOptionPane.showMessageDialog(null," Deleted" );
        }catch(SQLException | HeadlessException e){
         JOptionPane.showMessageDialog(null, e);   
-    }
+    }finally{
+          try{
+              rs.close();
+              pst.close();
+             }catch(Exception e){
+                           }
+            }
         Update_table();  
     }//GEN-LAST:event_Delete_table_threeActionPerformed
 

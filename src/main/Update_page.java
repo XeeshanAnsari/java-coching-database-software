@@ -34,7 +34,17 @@ PreparedStatement pst=null;
            table_one_info.setModel(DbUtils.resultSetToTableModel(rs));
        } catch(Exception e){
            JOptionPane.showMessageDialog(null, e);
-           }
+              }finally{
+          try{
+              rs.close();
+              pst.close();
+             }catch(Exception e){
+                           }
+            }
+       
+       
+       
+       
          try{
            String sql="Select * from addmition  where Class='10th'";
            pst=conn.prepareStatement(sql);
@@ -42,8 +52,16 @@ PreparedStatement pst=null;
            table_two_info.setModel(DbUtils.resultSetToTableModel(rs));
        } catch(Exception e){
            JOptionPane.showMessageDialog(null, e);
-           
-       } 
+            } finally{
+          try{
+              rs.close();
+              pst.close();
+             }catch(Exception e){
+                           }
+            }
+         
+         
+         
         try{
            String sql="Select * from addmition  where Class='1st year'";
            pst=conn.prepareStatement(sql);
@@ -51,8 +69,17 @@ PreparedStatement pst=null;
            table_three_info.setModel(DbUtils.resultSetToTableModel(rs));
        } catch(Exception e){
            JOptionPane.showMessageDialog(null, e);
-           
-       } 
+            }finally{
+          try{
+              rs.close();
+              pst.close();
+             }catch(Exception e){
+                           }
+            }
+        
+        
+        
+        
          try{
            String sql="Select * from addmition  where Class='2nd year'";
            pst=conn.prepareStatement(sql);
@@ -60,8 +87,13 @@ PreparedStatement pst=null;
            table_four_info.setModel(DbUtils.resultSetToTableModel(rs));
        } catch(Exception e){
            JOptionPane.showMessageDialog(null, e);
-           
-       } 
+            }finally{
+          try{
+              rs.close();
+              pst.close();
+             }catch(Exception e){
+                           }
+            } 
    }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -650,10 +682,17 @@ PreparedStatement pst=null;
            String sql= "update  addmition  set G_R_Number='"+value1+"',Class='"+value2+"',Name='"+value3+"',F_name='"+value4+"',Fee='"+value5+"',Phone_Number='"+value6+"',Address='"+value7+"' where  G_R_Number='"+value1+"'";
            pst=conn.prepareStatement(sql);
            pst.execute();
-           JOptionPane.showMessageDialog(null," updateed" );
+           JOptionPane.showMessageDialog(null," updated" );
        }catch(Exception e){
         JOptionPane.showMessageDialog(null, e);   
     }
+        finally{
+          try{
+              rs.close();
+              pst.close();
+             }catch(Exception e){
+                           }
+            }
         Update_table();
                            
     }//GEN-LAST:event_Update_cmdActionPerformed
@@ -693,7 +732,7 @@ PreparedStatement pst=null;
         try{
             String sql= "delete  from  addmition where G_R_number=? ";
             int row =table_two_info.getSelectedRow();
-            String Tabel_click=(table_two.getModel().getValueAt(row, 0).toString());
+            String Tabel_click=(table_two_info.getModel().getValueAt(row, 0).toString());
             pst=conn.prepareStatement(sql);
             pst.setString(1,Tabel_click );
             pst.execute();
@@ -719,7 +758,7 @@ PreparedStatement pst=null;
         try{
             String sql= "delete  from  addmition where G_R_number=? ";
             int row =table_three_info.getSelectedRow();
-            String Tabel_click=(table_three.getModel().getValueAt(row, 0).toString());
+            String Tabel_click=(table_three_info.getModel().getValueAt(row, 0).toString());
             pst=conn.prepareStatement(sql);
             pst.setString(1,Tabel_click );
             pst.execute();
@@ -798,7 +837,13 @@ PreparedStatement pst=null;
            
        }catch(Exception e){
            JOptionPane.showMessageDialog(null, e);
-       }
+       }finally{
+          try{
+              rs.close();
+              pst.close();
+             }catch(Exception e){
+                           }
+            }
         
     }//GEN-LAST:event_table_two_infoMouseClicked
 
@@ -828,7 +873,13 @@ PreparedStatement pst=null;
            
        }catch(Exception e){
            JOptionPane.showMessageDialog(null, e);
-       }
+       }finally{
+          try{
+              rs.close();
+              pst.close();
+             }catch(Exception e){
+                           }
+            }
     }//GEN-LAST:event_table_three_infoMouseClicked
 
     private void table_four_infoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_table_four_infoMouseClicked
@@ -857,7 +908,13 @@ PreparedStatement pst=null;
            
        }catch(Exception e){
            JOptionPane.showMessageDialog(null, e);
-       }
+       }finally{
+          try{
+              rs.close();
+              pst.close();
+             }catch(Exception e){
+                           }
+            }
     }//GEN-LAST:event_table_four_infoMouseClicked
 
     private void table_one_infoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_table_one_infoMouseClicked
@@ -886,7 +943,13 @@ PreparedStatement pst=null;
            
        }catch(Exception e){
            JOptionPane.showMessageDialog(null, e);
-       }
+       }finally{
+          try{
+              rs.close();
+              pst.close();
+             }catch(Exception e){
+                           }
+            }
     }//GEN-LAST:event_table_one_infoMouseClicked
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed

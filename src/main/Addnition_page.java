@@ -333,7 +333,13 @@ PreparedStatement pst=null;
        }catch(Exception e){
         JOptionPane.showMessageDialog(null, e);
         
-    }
+    }finally{
+          try{
+              rs.close();
+              pst.close();
+             }catch(Exception e){
+                           }
+            }
          Clear_txtbox();
         }
     }//GEN-LAST:event_add_cmdActionPerformed

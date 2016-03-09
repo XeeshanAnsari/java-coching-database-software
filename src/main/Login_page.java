@@ -134,8 +134,13 @@ PreparedStatement pst =null;
             }
         }catch(Exception e){
             JOptionPane.showMessageDialog(null,e );
-
-        }
+        }finally{
+          try{
+              rs.close();
+              pst.close();
+             }catch(Exception e){
+                           }
+            }
 
     }//GEN-LAST:event_cmd_loginActionPerformed
 
