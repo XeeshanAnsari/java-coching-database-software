@@ -37,11 +37,7 @@ PreparedStatement pst=null;
        } catch(Exception e){
            JOptionPane.showMessageDialog(null, e);
            }finally{
-          try{
-              rs.close();
-              pst.close();
-             }catch(Exception e){
-                           }
+          closedatabse();
             }
        
        
@@ -55,11 +51,7 @@ PreparedStatement pst=null;
            JOptionPane.showMessageDialog(null, e);
             } 
              finally{
-          try{
-              rs.close();
-              pst.close();
-             }catch(Exception e){
-                           }
+          closedatabse();
             } 
          
          
@@ -73,11 +65,7 @@ PreparedStatement pst=null;
        } catch(Exception e){
            JOptionPane.showMessageDialog(null, e);
            }finally{
-          try{
-              rs.close();
-              pst.close();
-             }catch(Exception e){
-                           }
+         closedatabse();
             }
          
          
@@ -91,14 +79,21 @@ PreparedStatement pst=null;
        } catch(Exception e){
            JOptionPane.showMessageDialog(null, e);
            }finally{
+          closedatabse();
+            } 
+       
+    }
+     
+     public void closedatabse(){
+        
           try{
               rs.close();
               pst.close();
              }catch(Exception e){
                            }
-            } 
-       
-    }
+            
+     }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -115,6 +110,7 @@ PreparedStatement pst=null;
         table_two = new javax.swing.JTable();
         Print_table_two = new javax.swing.JButton();
         Delete_table_two = new javax.swing.JButton();
+        search_txt = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         table_three = new javax.swing.JTable();
@@ -186,12 +182,23 @@ PreparedStatement pst=null;
             }
         });
 
+        search_txt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                search_txtKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                search_txtKeyTyped(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(search_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(54, 54, 54)
                 .addComponent(Delete_table_two)
                 .addGap(18, 18, 18)
                 .addComponent(Print_table_two)
@@ -205,7 +212,8 @@ PreparedStatement pst=null;
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Print_table_two)
-                    .addComponent(Delete_table_two))
+                    .addComponent(Delete_table_two)
+                    .addComponent(search_txt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 18, Short.MAX_VALUE))
         );
 
@@ -485,11 +493,7 @@ PreparedStatement pst=null;
        }catch(SQLException | HeadlessException e){
         JOptionPane.showMessageDialog(null, e);   
     }finally{
-          try{
-              rs.close();
-              pst.close();
-             }catch(Exception e){
-                           }
+          closedatabse();
             }
          Update_table();
     }//GEN-LAST:event_Delete_table_twoActionPerformed
@@ -506,11 +510,7 @@ PreparedStatement pst=null;
        }catch(SQLException | HeadlessException e){
         JOptionPane.showMessageDialog(null, e);   
     }finally{
-          try{
-              rs.close();
-              pst.close();
-             }catch(Exception e){
-                           }
+         closedatabse();
             }
          Update_table();
     }//GEN-LAST:event_Delete_table_threeActionPerformed
@@ -531,11 +531,7 @@ PreparedStatement pst=null;
        }catch(SQLException | HeadlessException e){
         JOptionPane.showMessageDialog(null, e);   
     }finally{
-          try{
-              rs.close();
-              pst.close();
-             }catch(Exception e){
-                           }
+          closedatabse();
             }
          Update_table();
     }//GEN-LAST:event_Delete_table_fourActionPerformed
@@ -574,6 +570,38 @@ PreparedStatement pst=null;
         f.setVisible(true);
         dispose();
     }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void search_txtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_search_txtKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_search_txtKeyTyped
+
+    private void search_txtKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_search_txtKeyReleased
+           try{
+               String sql="Select * from addmition where G_R_Number=?";
+            pst= conn.prepareStatement(sql);
+            pst.setString(1, search_txt.getText());
+            rs=pst.executeQuery();
+            table_two.setModel(DbUtils.resultSetToTableModel(rs));   
+         }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }finally{
+         closedatabse();
+            }    
+           
+           
+           
+           try{
+               String sql="Select * from addmition where Name=?";
+            pst= conn.prepareStatement(sql);
+            pst.setString(1, search_txt.getText());
+            rs=pst.executeQuery();
+            table_two.setModel(DbUtils.resultSetToTableModel(rs));   
+         }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }finally{
+         closedatabse();
+            }    
+    }//GEN-LAST:event_search_txtKeyReleased
 
     /**
      * @param args the command line arguments
@@ -639,6 +667,7 @@ PreparedStatement pst=null;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTextField search_txt;
     private javax.swing.JTable show_table;
     private javax.swing.JTable table_four;
     private javax.swing.JTable table_three;
