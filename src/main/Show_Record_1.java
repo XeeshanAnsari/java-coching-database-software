@@ -110,18 +110,23 @@ PreparedStatement pst=null;
         table_two = new javax.swing.JTable();
         Print_table_two = new javax.swing.JButton();
         Delete_table_two = new javax.swing.JButton();
-        search_txt = new javax.swing.JTextField();
+        jPanel4 = new javax.swing.JPanel();
+        search_table_two = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         table_three = new javax.swing.JTable();
         Print_table_three = new javax.swing.JButton();
         Delete_table_three = new javax.swing.JButton();
+        search_table_three = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
         table_four = new javax.swing.JTable();
         Print_table_four = new javax.swing.JButton();
-        Delete_table_three1 = new javax.swing.JButton();
         Delete_table_four = new javax.swing.JButton();
+        search_table_four = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         show_table = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
@@ -182,23 +187,49 @@ PreparedStatement pst=null;
             }
         });
 
-        search_txt.addKeyListener(new java.awt.event.KeyAdapter() {
+        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+
+        search_table_two.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
-                search_txtKeyReleased(evt);
+                search_table_twoKeyReleased(evt);
             }
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                search_txtKeyTyped(evt);
+                search_table_twoKeyTyped(evt);
             }
         });
+
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Search");
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(search_table_two, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(search_table_two, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(search_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(54, 54, 54)
+                .addGap(23, 23, 23)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(Delete_table_two)
                 .addGap(18, 18, 18)
                 .addComponent(Print_table_two)
@@ -210,11 +241,12 @@ PreparedStatement pst=null;
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Print_table_two)
-                    .addComponent(Delete_table_two)
-                    .addComponent(search_txt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 18, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(Print_table_two)
+                        .addComponent(Delete_table_two))
+                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Class 10th", jPanel1);
@@ -248,6 +280,15 @@ PreparedStatement pst=null;
             }
         });
 
+        search_table_three.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                search_table_threeKeyReleased(evt);
+            }
+        });
+
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("Search");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -255,6 +296,10 @@ PreparedStatement pst=null;
             .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 1115, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(search_table_three, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(730, 730, 730)
                 .addComponent(Delete_table_three)
                 .addGap(18, 18, 18)
                 .addComponent(Print_table_three)
@@ -267,8 +312,10 @@ PreparedStatement pst=null;
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Print_table_three)
-                    .addComponent(Delete_table_three))
-                .addGap(0, 18, Short.MAX_VALUE))
+                    .addComponent(Delete_table_three)
+                    .addComponent(search_table_three, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18))
         );
 
         jTabbedPane1.addTab("1st Year", jPanel2);
@@ -295,13 +342,6 @@ PreparedStatement pst=null;
             }
         });
 
-        Delete_table_three1.setText("Delete");
-        Delete_table_three1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Delete_table_three1ActionPerformed(evt);
-            }
-        });
-
         Delete_table_four.setText("Delete");
         Delete_table_four.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -309,22 +349,30 @@ PreparedStatement pst=null;
             }
         });
 
+        search_table_four.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                search_table_fourKeyReleased(evt);
+            }
+        });
+
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("Search");
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1115, Short.MAX_VALUE)
+            .addComponent(jScrollPane4, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(search_table_four, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(730, 730, 730)
                 .addComponent(Delete_table_four)
                 .addGap(18, 18, 18)
                 .addComponent(Print_table_four)
                 .addContainerGap())
-            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel3Layout.createSequentialGroup()
-                    .addGap(421, 421, 421)
-                    .addComponent(Delete_table_three1)
-                    .addContainerGap(631, Short.MAX_VALUE)))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -333,13 +381,10 @@ PreparedStatement pst=null;
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Print_table_four)
-                    .addComponent(Delete_table_four))
+                    .addComponent(Delete_table_four)
+                    .addComponent(search_table_four, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 18, Short.MAX_VALUE))
-            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel3Layout.createSequentialGroup()
-                    .addGap(244, 244, 244)
-                    .addComponent(Delete_table_three1)
-                    .addContainerGap(255, Short.MAX_VALUE)))
         );
 
         jTabbedPane1.addTab("2nd Year", jPanel3);
@@ -515,10 +560,6 @@ PreparedStatement pst=null;
          Update_table();
     }//GEN-LAST:event_Delete_table_threeActionPerformed
 
-    private void Delete_table_three1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Delete_table_three1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Delete_table_three1ActionPerformed
-
     private void Delete_table_fourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Delete_table_fourActionPerformed
         try{
              String sql= "delete  from  addmition where G_R_number=? ";
@@ -571,15 +612,15 @@ PreparedStatement pst=null;
         dispose();
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
-    private void search_txtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_search_txtKeyTyped
+    private void search_table_twoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_search_table_twoKeyTyped
         // TODO add your handling code here:
-    }//GEN-LAST:event_search_txtKeyTyped
+    }//GEN-LAST:event_search_table_twoKeyTyped
 
-    private void search_txtKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_search_txtKeyReleased
+    private void search_table_twoKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_search_table_twoKeyReleased
            try{
                String sql="Select * from addmition where G_R_Number=?";
             pst= conn.prepareStatement(sql);
-            pst.setString(1, search_txt.getText());
+            pst.setString(1, search_table_two.getText());
             rs=pst.executeQuery();
             table_two.setModel(DbUtils.resultSetToTableModel(rs));   
          }catch(Exception e){
@@ -593,7 +634,7 @@ PreparedStatement pst=null;
            try{
                String sql="Select * from addmition where Name=?";
             pst= conn.prepareStatement(sql);
-            pst.setString(1, search_txt.getText());
+            pst.setString(1, search_table_two.getText());
             rs=pst.executeQuery();
             table_two.setModel(DbUtils.resultSetToTableModel(rs));   
          }catch(Exception e){
@@ -601,7 +642,63 @@ PreparedStatement pst=null;
         }finally{
          closedatabse();
             }    
-    }//GEN-LAST:event_search_txtKeyReleased
+    }//GEN-LAST:event_search_table_twoKeyReleased
+
+    private void search_table_threeKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_search_table_threeKeyReleased
+       try{
+               String sql="Select * from addmition where G_R_Number=?";
+            pst= conn.prepareStatement(sql);
+            pst.setString(1, search_table_three.getText());
+            rs=pst.executeQuery();
+            table_three.setModel(DbUtils.resultSetToTableModel(rs));   
+         }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }finally{
+         closedatabse();
+            }    
+           
+           
+           
+           try{
+               String sql="Select * from addmition where Name=?";
+            pst= conn.prepareStatement(sql);
+            pst.setString(1, search_table_three.getText());
+            rs=pst.executeQuery();
+            table_three.setModel(DbUtils.resultSetToTableModel(rs));   
+         }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }finally{
+         closedatabse();
+            }
+    }//GEN-LAST:event_search_table_threeKeyReleased
+
+    private void search_table_fourKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_search_table_fourKeyReleased
+      try{
+               String sql="Select * from addmition where G_R_Number=?";
+            pst= conn.prepareStatement(sql);
+            pst.setString(1, search_table_four.getText());
+            rs=pst.executeQuery();
+            table_four.setModel(DbUtils.resultSetToTableModel(rs));   
+         }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }finally{
+         closedatabse();
+            }    
+           
+           
+           
+           try{
+               String sql="Select * from addmition where Name=?";
+            pst= conn.prepareStatement(sql);
+            pst.setString(1, search_table_four.getText());
+            rs=pst.executeQuery();
+            table_four.setModel(DbUtils.resultSetToTableModel(rs));   
+         }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }finally{
+         closedatabse();
+            }
+    }//GEN-LAST:event_search_table_fourKeyReleased
 
     /**
      * @param args the command line arguments
@@ -641,12 +738,14 @@ PreparedStatement pst=null;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Delete_table_four;
     private javax.swing.JButton Delete_table_three;
-    private javax.swing.JButton Delete_table_three1;
     private javax.swing.JButton Delete_table_two;
     private javax.swing.JButton Print_table_four;
     private javax.swing.JButton Print_table_three;
     private javax.swing.JButton Print_table_two;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
@@ -660,6 +759,7 @@ PreparedStatement pst=null;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -667,7 +767,9 @@ PreparedStatement pst=null;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextField search_txt;
+    private javax.swing.JTextField search_table_four;
+    private javax.swing.JTextField search_table_three;
+    private javax.swing.JTextField search_table_two;
     private javax.swing.JTable show_table;
     private javax.swing.JTable table_four;
     private javax.swing.JTable table_three;
