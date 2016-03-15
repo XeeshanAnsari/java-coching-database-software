@@ -112,6 +112,15 @@ PreparedStatement pst =null;
     
     }
 
+    
+     public void closedatabse(){
+        
+          try{
+              rs.close();
+              pst.close();
+             }catch(Exception e){
+                           }      
+     }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -130,6 +139,8 @@ PreparedStatement pst =null;
         fee_table_two = new javax.swing.JTable();
         print_table_two = new javax.swing.JButton();
         Delete_table_two = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
+        Search_table_two = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         fee_table_three = new javax.swing.JTable();
@@ -230,17 +241,34 @@ PreparedStatement pst =null;
             }
         });
 
+        jLabel9.setText("Search");
+
+        Search_table_two.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Search_table_twoActionPerformed(evt);
+            }
+        });
+        Search_table_two.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                Search_table_twoKeyReleased(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(623, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(Search_table_two, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(Delete_table_two)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(print_table_two)
                 .addContainerGap())
-            .addComponent(jScrollPane4, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(jScrollPane4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 757, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -249,7 +277,9 @@ PreparedStatement pst =null;
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(print_table_two)
-                    .addComponent(Delete_table_two))
+                    .addComponent(Delete_table_two)
+                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Search_table_two, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 29, Short.MAX_VALUE))
         );
 
@@ -889,6 +919,51 @@ PreparedStatement pst =null;
        
     }//GEN-LAST:event_Clear_cmdActionPerformed
 
+    private void Search_table_twoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Search_table_twoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Search_table_twoActionPerformed
+
+    private void Search_table_twoKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Search_table_twoKeyReleased
+         try{
+             
+             String as=Search_table_two.getText();
+               String sql="Select * from Fee_inform where G_R_Number='"+as+"'";
+            pst= conn.prepareStatement(sql);
+          
+            rs=pst.executeQuery();
+            fee_table_two.setModel(DbUtils.resultSetToTableModel(rs));   
+         }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }finally{
+         closedatabse();
+            }    
+           
+           
+           
+           try{
+               String sql="Select * from Fee_inform where Name=?";
+            pst= conn.prepareStatement(sql);
+            pst.setString(1, Search_table_two.getText());
+            rs=pst.executeQuery();
+            fee_table_two.setModel(DbUtils.resultSetToTableModel(rs));   
+         }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }finally{
+         closedatabse();
+            }
+           try{
+               String sql="Select * from Fee_inform where Month=?";
+            pst= conn.prepareStatement(sql);
+            pst.setString(1, Search_table_two.getText());
+            rs=pst.executeQuery();
+            fee_table_two.setModel(DbUtils.resultSetToTableModel(rs));   
+         }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }finally{
+         closedatabse();
+            }
+    }//GEN-LAST:event_Search_table_twoKeyReleased
+
     /**
      * @param args the command line arguments
      */
@@ -934,6 +1009,7 @@ PreparedStatement pst =null;
     private javax.swing.JButton Print_table_four;
     private javax.swing.JButton Print_table_four1;
     private javax.swing.JButton Print_table_three;
+    private javax.swing.JTextField Search_table_two;
     private javax.swing.JTextField Search_txt;
     private javax.swing.JTextField class_txt;
     private javax.swing.JTextField date_txt;
@@ -951,6 +1027,7 @@ PreparedStatement pst =null;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
