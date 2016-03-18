@@ -587,7 +587,9 @@ PreparedStatement pst=null;
     private void search_table_threeKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_search_table_threeKeyReleased
        String search= search_table_three.getText();    
            String combo= combo_three_txt.getSelectedItem().toString();
-        
+        if("Search".equals(combo)){
+               JOptionPane.showMessageDialog(null, "please first select");
+           }
          if (combo=="G_R no"){ 
          try{    
                String sql="Select * from addmition where G_R_Number='"+search+"'";
@@ -619,7 +621,9 @@ PreparedStatement pst=null;
     private void search_table_fourKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_search_table_fourKeyReleased
       String search= search_table_four.getText();    
            String combo= combo_four_txt.getSelectedItem().toString();
-        
+        if("Search".equals(combo)){
+               JOptionPane.showMessageDialog(null, "please first select");
+           }
          if (combo=="G_R no"){ 
          try{    
                String sql="Select * from addmition where G_R_Number='"+search+"'";
@@ -651,7 +655,9 @@ PreparedStatement pst=null;
     private void search_table_twoKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_search_table_twoKeyReleased
            String search= search_table_two.getText();    
            String combo= combo_two_txt.getSelectedItem().toString();
-        
+        if("Search".equals(combo)){
+               JOptionPane.showMessageDialog(null, "please first select");
+           }
          if (combo=="G_R no"){ 
          try{    
                String sql="Select * from addmition where G_R_Number='"+search+"'";
@@ -697,21 +703,19 @@ PreparedStatement pst=null;
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Show_Record.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Show_Record_1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Show_Record.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Show_Record_1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Show_Record.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Show_Record_1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Show_Record.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Show_Record_1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Show_Record_1().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new Show_Record_1().setVisible(true);
         });
     }
 
