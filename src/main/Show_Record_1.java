@@ -380,7 +380,7 @@ PreparedStatement pst=null;
         jTabbedPane1.getAccessibleContext().setAccessibleParent(jTabbedPane1);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Background_Form.jpg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 1280, 730));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 720));
 
         jMenu1.setText("File");
 
@@ -649,7 +649,7 @@ PreparedStatement pst=null;
     }//GEN-LAST:event_search_table_fourKeyReleased
 
     private void search_table_twoKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_search_table_twoKeyReleased
-        String search= search_table_two.getText();    
+           String search= search_table_two.getText();    
            String combo= combo_two_txt.getSelectedItem().toString();
         
          if (combo=="G_R no"){ 
