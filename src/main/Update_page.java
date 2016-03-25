@@ -167,24 +167,22 @@ PreparedStatement pst=null;
         jScrollPane16 = new javax.swing.JScrollPane();
         table_three_info = new javax.swing.JTable();
         Print_table_three4 = new javax.swing.JButton();
-        Delete_table_three4 = new javax.swing.JButton();
+        Delete_table_three = new javax.swing.JButton();
         jPanel17 = new javax.swing.JPanel();
         jScrollPane17 = new javax.swing.JScrollPane();
         table_four_info = new javax.swing.JTable();
-        Print_table_four = new javax.swing.JButton();
         Delete_table_four = new javax.swing.JButton();
-        Delete_table_four1 = new javax.swing.JButton();
-        Print_table_four1 = new javax.swing.JButton();
+        Print_table_four = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane21 = new javax.swing.JScrollPane();
         table_five_info = new javax.swing.JTable();
-        Delete_table_four3 = new javax.swing.JButton();
-        Print_table_four3 = new javax.swing.JButton();
+        Delete_table_five = new javax.swing.JButton();
+        Print_table_five = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane20 = new javax.swing.JScrollPane();
         table_six_info = new javax.swing.JTable();
-        Delete_table_four2 = new javax.swing.JButton();
-        Print_table_four2 = new javax.swing.JButton();
+        Delete_table_six = new javax.swing.JButton();
+        Print_table_six = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -510,11 +508,11 @@ PreparedStatement pst=null;
             }
         });
 
-        Delete_table_three4.setFont(new java.awt.Font("Sitka Small", 1, 12)); // NOI18N
-        Delete_table_three4.setText("Delete");
-        Delete_table_three4.addActionListener(new java.awt.event.ActionListener() {
+        Delete_table_three.setFont(new java.awt.Font("Sitka Small", 1, 12)); // NOI18N
+        Delete_table_three.setText("Delete");
+        Delete_table_three.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Delete_table_three4ActionPerformed(evt);
+                Delete_table_threeActionPerformed(evt);
             }
         });
 
@@ -524,7 +522,7 @@ PreparedStatement pst=null;
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel16Layout.createSequentialGroup()
                 .addContainerGap(469, Short.MAX_VALUE)
-                .addComponent(Delete_table_three4)
+                .addComponent(Delete_table_three)
                 .addGap(18, 18, 18)
                 .addComponent(Print_table_three4)
                 .addContainerGap())
@@ -537,7 +535,7 @@ PreparedStatement pst=null;
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Print_table_three4)
-                    .addComponent(Delete_table_three4))
+                    .addComponent(Delete_table_three))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -563,13 +561,7 @@ PreparedStatement pst=null;
         });
         jScrollPane17.setViewportView(table_four_info);
 
-        Print_table_four.setText("Print");
-        Print_table_four.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Print_table_fourActionPerformed(evt);
-            }
-        });
-
+        Delete_table_four.setFont(new java.awt.Font("Sitka Small", 1, 12)); // NOI18N
         Delete_table_four.setText("Delete");
         Delete_table_four.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -577,19 +569,11 @@ PreparedStatement pst=null;
             }
         });
 
-        Delete_table_four1.setFont(new java.awt.Font("Sitka Small", 1, 12)); // NOI18N
-        Delete_table_four1.setText("Delete");
-        Delete_table_four1.addActionListener(new java.awt.event.ActionListener() {
+        Print_table_four.setFont(new java.awt.Font("Sitka Small", 1, 12)); // NOI18N
+        Print_table_four.setText("Print");
+        Print_table_four.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Delete_table_four1ActionPerformed(evt);
-            }
-        });
-
-        Print_table_four1.setFont(new java.awt.Font("Sitka Small", 1, 12)); // NOI18N
-        Print_table_four1.setText("Print");
-        Print_table_four1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Print_table_four1ActionPerformed(evt);
+                Print_table_fourActionPerformed(evt);
             }
         });
 
@@ -600,30 +584,20 @@ PreparedStatement pst=null;
             .addComponent(jScrollPane17, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 635, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
-                        .addComponent(Delete_table_four)
-                        .addGap(18, 18, 18)
-                        .addComponent(Print_table_four))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
-                        .addComponent(Delete_table_four1)
-                        .addGap(18, 18, 18)
-                        .addComponent(Print_table_four1)))
+                .addComponent(Delete_table_four)
+                .addGap(18, 18, 18)
+                .addComponent(Print_table_four)
                 .addContainerGap())
         );
         jPanel17Layout.setVerticalGroup(
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel17Layout.createSequentialGroup()
-                .addComponent(jScrollPane17, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Print_table_four1)
-                    .addComponent(Delete_table_four1))
-                .addGap(54, 54, 54)
+                .addComponent(jScrollPane17, javax.swing.GroupLayout.PREFERRED_SIZE, 475, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Print_table_four)
                     .addComponent(Delete_table_four))
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 22, Short.MAX_VALUE))
         );
 
         jTabbedPane14.addTab("2nd Year", jPanel17);
@@ -648,19 +622,19 @@ PreparedStatement pst=null;
         });
         jScrollPane21.setViewportView(table_five_info);
 
-        Delete_table_four3.setFont(new java.awt.Font("Sitka Small", 1, 12)); // NOI18N
-        Delete_table_four3.setText("Delete");
-        Delete_table_four3.addActionListener(new java.awt.event.ActionListener() {
+        Delete_table_five.setFont(new java.awt.Font("Sitka Small", 1, 12)); // NOI18N
+        Delete_table_five.setText("Delete");
+        Delete_table_five.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Delete_table_four3ActionPerformed(evt);
+                Delete_table_fiveActionPerformed(evt);
             }
         });
 
-        Print_table_four3.setFont(new java.awt.Font("Sitka Small", 1, 12)); // NOI18N
-        Print_table_four3.setText("Print");
-        Print_table_four3.addActionListener(new java.awt.event.ActionListener() {
+        Print_table_five.setFont(new java.awt.Font("Sitka Small", 1, 12)); // NOI18N
+        Print_table_five.setText("Print");
+        Print_table_five.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Print_table_four3ActionPerformed(evt);
+                Print_table_fiveActionPerformed(evt);
             }
         });
 
@@ -671,9 +645,9 @@ PreparedStatement pst=null;
             .addComponent(jScrollPane21, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 635, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(Delete_table_four3)
+                .addComponent(Delete_table_five)
                 .addGap(18, 18, 18)
-                .addComponent(Print_table_four3)
+                .addComponent(Print_table_five)
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -682,8 +656,8 @@ PreparedStatement pst=null;
                 .addComponent(jScrollPane21, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Print_table_four3)
-                    .addComponent(Delete_table_four3))
+                    .addComponent(Print_table_five)
+                    .addComponent(Delete_table_five))
                 .addGap(0, 22, Short.MAX_VALUE))
         );
 
@@ -709,19 +683,19 @@ PreparedStatement pst=null;
         });
         jScrollPane20.setViewportView(table_six_info);
 
-        Delete_table_four2.setFont(new java.awt.Font("Sitka Small", 1, 12)); // NOI18N
-        Delete_table_four2.setText("Delete");
-        Delete_table_four2.addActionListener(new java.awt.event.ActionListener() {
+        Delete_table_six.setFont(new java.awt.Font("Sitka Small", 1, 12)); // NOI18N
+        Delete_table_six.setText("Delete");
+        Delete_table_six.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Delete_table_four2ActionPerformed(evt);
+                Delete_table_sixActionPerformed(evt);
             }
         });
 
-        Print_table_four2.setFont(new java.awt.Font("Sitka Small", 1, 12)); // NOI18N
-        Print_table_four2.setText("Print");
-        Print_table_four2.addActionListener(new java.awt.event.ActionListener() {
+        Print_table_six.setFont(new java.awt.Font("Sitka Small", 1, 12)); // NOI18N
+        Print_table_six.setText("Print");
+        Print_table_six.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Print_table_four2ActionPerformed(evt);
+                Print_table_sixActionPerformed(evt);
             }
         });
 
@@ -732,9 +706,9 @@ PreparedStatement pst=null;
             .addComponent(jScrollPane20, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 635, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(Delete_table_four2)
+                .addComponent(Delete_table_six)
                 .addGap(18, 18, 18)
-                .addComponent(Print_table_four2)
+                .addComponent(Print_table_six)
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
@@ -743,8 +717,8 @@ PreparedStatement pst=null;
                 .addComponent(jScrollPane20, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Print_table_four2)
-                    .addComponent(Delete_table_four2))
+                    .addComponent(Print_table_six)
+                    .addComponent(Delete_table_six))
                 .addGap(0, 22, Short.MAX_VALUE))
         );
 
@@ -918,7 +892,7 @@ PreparedStatement pst=null;
         }
     }//GEN-LAST:event_Print_table_three4ActionPerformed
 
-    private void Delete_table_three4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Delete_table_three4ActionPerformed
+    private void Delete_table_threeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Delete_table_threeActionPerformed
         try{
             String sql= "delete  from  addmition where G_R_number=? ";
             int row =table_three_info.getSelectedRow();
@@ -931,18 +905,15 @@ PreparedStatement pst=null;
             JOptionPane.showMessageDialog(null, e);
         }
         Update_table();
-    }//GEN-LAST:event_Delete_table_three4ActionPerformed
+    }//GEN-LAST:event_Delete_table_threeActionPerformed
 
-    private void Print_table_fourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Print_table_fourActionPerformed
-        MessageFormat header =new MessageFormat("Report Print");
-        MessageFormat footer =new MessageFormat("page{0,number,integer}");
-        try{
-            table_four_info.print(JTable.PrintMode.NORMAL,header,footer);
-        }catch(java.awt.print.PrinterException e){
+    private void jTabbedPane14StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jTabbedPane14StateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTabbedPane14StateChanged
 
-            System.err.format("connot Print %s%n", e.getMessage());
-        }
-    }//GEN-LAST:event_Print_table_fourActionPerformed
+    private void jTabbedPane14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane14MouseClicked
+
+    }//GEN-LAST:event_jTabbedPane14MouseClicked
 
     private void Delete_table_fourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Delete_table_fourActionPerformed
         try{
@@ -959,21 +930,16 @@ PreparedStatement pst=null;
         Update_table();
     }//GEN-LAST:event_Delete_table_fourActionPerformed
 
-    private void jTabbedPane14StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jTabbedPane14StateChanged
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTabbedPane14StateChanged
+    private void Print_table_fourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Print_table_fourActionPerformed
+        MessageFormat header =new MessageFormat("Report Print");
+        MessageFormat footer =new MessageFormat("page{0,number,integer}");
+        try{
+            table_four_info.print(JTable.PrintMode.NORMAL,header,footer);
+        }catch(java.awt.print.PrinterException e){
 
-    private void jTabbedPane14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane14MouseClicked
-
-    }//GEN-LAST:event_jTabbedPane14MouseClicked
-
-    private void Delete_table_four1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Delete_table_four1ActionPerformed
-        
-    }//GEN-LAST:event_Delete_table_four1ActionPerformed
-
-    private void Print_table_four1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Print_table_four1ActionPerformed
-       
-    }//GEN-LAST:event_Print_table_four1ActionPerformed
+            System.err.format("connot Print %s%n", e.getMessage());
+        }
+    }//GEN-LAST:event_Print_table_fourActionPerformed
 
     private void table_two_infoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_table_two_infoMouseClicked
         try{
@@ -1197,13 +1163,31 @@ PreparedStatement pst=null;
             }
     }//GEN-LAST:event_table_six_infoMouseClicked
 
-    private void Delete_table_four2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Delete_table_four2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Delete_table_four2ActionPerformed
+    private void Delete_table_sixActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Delete_table_sixActionPerformed
+       try{
+            String sql= "delete  from  addmition where G_R_number=? ";
+            int row =table_six_info.getSelectedRow();
+            String Tabel_click=(table_six_info.getModel().getValueAt(row, 0).toString());
+            pst=conn.prepareStatement(sql);
+            pst.setString(1,Tabel_click );
+            pst.execute();
+            JOptionPane.showMessageDialog(null," Deleted" );
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }
+        Update_table();  
+    }//GEN-LAST:event_Delete_table_sixActionPerformed
 
-    private void Print_table_four2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Print_table_four2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Print_table_four2ActionPerformed
+    private void Print_table_sixActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Print_table_sixActionPerformed
+         MessageFormat header =new MessageFormat("Report Print");
+        MessageFormat footer =new MessageFormat("page{0,number,integer}");
+        try{
+            table_six_info.print(JTable.PrintMode.NORMAL,header,footer);
+        }catch(java.awt.print.PrinterException e){
+
+            System.err.format("connot Print %s%n", e.getMessage());
+        }
+    }//GEN-LAST:event_Print_table_sixActionPerformed
 
     private void table_five_infoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_table_five_infoMouseClicked
           try{
@@ -1240,13 +1224,31 @@ PreparedStatement pst=null;
             }
     }//GEN-LAST:event_table_five_infoMouseClicked
 
-    private void Delete_table_four3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Delete_table_four3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Delete_table_four3ActionPerformed
+    private void Delete_table_fiveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Delete_table_fiveActionPerformed
+         try{
+            String sql= "delete  from  addmition where G_R_number=? ";
+            int row =table_five_info.getSelectedRow();
+            String Tabel_click=(table_five_info.getModel().getValueAt(row, 0).toString());
+            pst=conn.prepareStatement(sql);
+            pst.setString(1,Tabel_click );
+            pst.execute();
+            JOptionPane.showMessageDialog(null," Deleted" );
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }
+        Update_table();       
+    }//GEN-LAST:event_Delete_table_fiveActionPerformed
 
-    private void Print_table_four3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Print_table_four3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Print_table_four3ActionPerformed
+    private void Print_table_fiveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Print_table_fiveActionPerformed
+         MessageFormat header =new MessageFormat("Report Print");
+        MessageFormat footer =new MessageFormat("page{0,number,integer}");
+        try{
+            table_five_info.print(JTable.PrintMode.NORMAL,header,footer);
+        }catch(java.awt.print.PrinterException e){
+
+            System.err.format("connot Print %s%n", e.getMessage());
+        }
+    }//GEN-LAST:event_Print_table_fiveActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1285,18 +1287,16 @@ PreparedStatement pst=null;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Clear_cmd;
+    private javax.swing.JButton Delete_table_five;
     private javax.swing.JButton Delete_table_four;
-    private javax.swing.JButton Delete_table_four1;
-    private javax.swing.JButton Delete_table_four2;
-    private javax.swing.JButton Delete_table_four3;
-    private javax.swing.JButton Delete_table_three4;
+    private javax.swing.JButton Delete_table_six;
+    private javax.swing.JButton Delete_table_three;
     private javax.swing.JButton Delete_table_two9;
     private javax.swing.JTextField Gr_no;
     private javax.swing.JTextField Phone_no;
+    private javax.swing.JButton Print_table_five;
     private javax.swing.JButton Print_table_four;
-    private javax.swing.JButton Print_table_four1;
-    private javax.swing.JButton Print_table_four2;
-    private javax.swing.JButton Print_table_four3;
+    private javax.swing.JButton Print_table_six;
     private javax.swing.JButton Print_table_three4;
     private javax.swing.JButton Print_table_two9;
     private javax.swing.JButton Update_cmd;
