@@ -5,18 +5,23 @@
  */
 package main;
 
+import java.io.File;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
 /**
  *
  * @author Xeeshan
  */
-public class Connect_database {
+public class Connect_database {   
+       
     Connection conn=null;
     public static Connection connecerDb(){
+        
         try {
+            
             Class.forName("org.sqlite.JDBC");
             Connection conn=DriverManager.getConnection("jdbc:sqlite:database.sqlite");
             /*JOptionPane.showMessageDialog(null, "connection "); */
@@ -25,7 +30,7 @@ public class Connect_database {
         } catch (Exception e) {
           JOptionPane.showMessageDialog(null, e);
           return null;
-        }
+        } 
         
     }
     
