@@ -94,6 +94,38 @@ PreparedStatement pst=null;
              }catch(Exception e){
                            }
             } 
+         
+         try{
+           String sql="Select * from addmition  where Class='B.S.C'";
+           pst=conn.prepareStatement(sql);
+           rs=pst.executeQuery();
+           table_five_info.setModel(DbUtils.resultSetToTableModel(rs));
+       } catch(Exception e){
+           JOptionPane.showMessageDialog(null, e);
+              }finally{
+          try{
+              rs.close();
+              pst.close();
+             }catch(Exception e){
+                           }
+            }
+         
+         
+         
+         try{
+           String sql="Select * from addmition  where Class='B.Com'";
+           pst=conn.prepareStatement(sql);
+           rs=pst.executeQuery();
+           table_six_info.setModel(DbUtils.resultSetToTableModel(rs));
+       } catch(Exception e){
+           JOptionPane.showMessageDialog(null, e);
+              }finally{
+          try{
+              rs.close();
+              pst.close();
+             }catch(Exception e){
+                           }
+            }
    }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -124,6 +156,8 @@ PreparedStatement pst=null;
         name_txt = new javax.swing.JTextField();
         Clear_cmd = new javax.swing.JButton();
         jTabbedPane14 = new javax.swing.JTabbedPane();
+        jScrollPane18 = new javax.swing.JScrollPane();
+        table_one_info = new javax.swing.JTable();
         jPanel15 = new javax.swing.JPanel();
         Print_table_two9 = new javax.swing.JButton();
         Delete_table_two9 = new javax.swing.JButton();
@@ -141,8 +175,16 @@ PreparedStatement pst=null;
         Delete_table_four = new javax.swing.JButton();
         Delete_table_four1 = new javax.swing.JButton();
         Print_table_four1 = new javax.swing.JButton();
-        jScrollPane18 = new javax.swing.JScrollPane();
-        table_one_info = new javax.swing.JTable();
+        jPanel2 = new javax.swing.JPanel();
+        jScrollPane21 = new javax.swing.JScrollPane();
+        table_five_info = new javax.swing.JTable();
+        Delete_table_four3 = new javax.swing.JButton();
+        Print_table_four3 = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        jScrollPane20 = new javax.swing.JScrollPane();
+        table_six_info = new javax.swing.JTable();
+        Delete_table_four2 = new javax.swing.JButton();
+        Print_table_four2 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -217,7 +259,7 @@ PreparedStatement pst=null;
         Gr_no.setFont(new java.awt.Font("Segoe UI Semilight", 0, 14)); // NOI18N
 
         class_txt.setFont(new java.awt.Font("Segoe UI Semibold", 2, 14)); // NOI18N
-        class_txt.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Class", "9th", "10th", "1st year", "2nd year" }));
+        class_txt.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Class", "9th", "10th", "1st year", "2nd year", "B.S.C", "B.Com" }));
         class_txt.addPopupMenuListener(new javax.swing.event.PopupMenuListener() {
             public void popupMenuCanceled(javax.swing.event.PopupMenuEvent evt) {
             }
@@ -358,6 +400,26 @@ PreparedStatement pst=null;
                 jTabbedPane14MouseClicked(evt);
             }
         });
+
+        table_one_info.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        table_one_info.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                table_one_infoMouseClicked(evt);
+            }
+        });
+        jScrollPane18.setViewportView(table_one_info);
+
+        jTabbedPane14.addTab("Class 9th", jScrollPane18);
 
         jPanel15.setOpaque(false);
 
@@ -566,7 +628,9 @@ PreparedStatement pst=null;
 
         jTabbedPane14.addTab("2nd Year", jPanel17);
 
-        table_one_info.setModel(new javax.swing.table.DefaultTableModel(
+        jPanel2.setOpaque(false);
+
+        table_five_info.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -577,14 +641,114 @@ PreparedStatement pst=null;
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        table_one_info.addMouseListener(new java.awt.event.MouseAdapter() {
+        table_five_info.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                table_one_infoMouseClicked(evt);
+                table_five_infoMouseClicked(evt);
             }
         });
-        jScrollPane18.setViewportView(table_one_info);
+        jScrollPane21.setViewportView(table_five_info);
 
-        jTabbedPane14.addTab("Class 9th", jScrollPane18);
+        Delete_table_four3.setFont(new java.awt.Font("Sitka Small", 1, 12)); // NOI18N
+        Delete_table_four3.setText("Delete");
+        Delete_table_four3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Delete_table_four3ActionPerformed(evt);
+            }
+        });
+
+        Print_table_four3.setFont(new java.awt.Font("Sitka Small", 1, 12)); // NOI18N
+        Print_table_four3.setText("Print");
+        Print_table_four3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Print_table_four3ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane21, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 635, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Delete_table_four3)
+                .addGap(18, 18, 18)
+                .addComponent(Print_table_four3)
+                .addContainerGap())
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(jScrollPane21, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Print_table_four3)
+                    .addComponent(Delete_table_four3))
+                .addGap(0, 22, Short.MAX_VALUE))
+        );
+
+        jTabbedPane14.addTab("B.S.C", jPanel2);
+
+        jPanel3.setOpaque(false);
+
+        table_six_info.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        table_six_info.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                table_six_infoMouseClicked(evt);
+            }
+        });
+        jScrollPane20.setViewportView(table_six_info);
+
+        Delete_table_four2.setFont(new java.awt.Font("Sitka Small", 1, 12)); // NOI18N
+        Delete_table_four2.setText("Delete");
+        Delete_table_four2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Delete_table_four2ActionPerformed(evt);
+            }
+        });
+
+        Print_table_four2.setFont(new java.awt.Font("Sitka Small", 1, 12)); // NOI18N
+        Print_table_four2.setText("Print");
+        Print_table_four2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Print_table_four2ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane20, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 635, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Delete_table_four2)
+                .addGap(18, 18, 18)
+                .addComponent(Print_table_four2)
+                .addContainerGap())
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addComponent(jScrollPane20, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Print_table_four2)
+                    .addComponent(Delete_table_four2))
+                .addGap(0, 22, Short.MAX_VALUE))
+        );
+
+        jTabbedPane14.addTab("B.Com", jPanel3);
 
         getContentPane().add(jTabbedPane14, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 90, 640, 559));
 
@@ -998,6 +1162,92 @@ PreparedStatement pst=null;
                address_txt.setText("");
     }//GEN-LAST:event_Clear_cmdActionPerformed
 
+    private void table_six_infoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_table_six_infoMouseClicked
+         try{
+           int row =table_six_info.getSelectedRow();
+           String Tabel_click=(table_six_info.getModel().getValueAt(row, 0).toString());
+              String sql="select * from addmition where G_R_Number='"+Tabel_click+"'";
+           pst=conn.prepareStatement(sql);
+           rs=pst.executeQuery();
+           if(rs.next()){
+               String add1=rs.getString("G_R_Number");
+               Gr_no.setText(add1);
+               String add2=rs.getString("Class");
+               class_txt.setSelectedItem(add2);
+               String add3=rs.getString("Name");
+               name_txt.setText(add3);
+               String add4=rs.getString("F_name");
+               f_name_txt.setText(add4);
+               String add5=rs.getString("Fee");
+               fee_txt.setText(add5);
+               String add6=rs.getString("Phone_number");
+               Phone_no.setText(add6);
+               String add7=rs.getString("Address");
+               address_txt.setText(add7);
+           }
+           
+       }catch(Exception e){
+           JOptionPane.showMessageDialog(null, e);
+       }finally{
+          try{
+              rs.close();
+              pst.close();
+             }catch(Exception e){
+                           }
+            }
+    }//GEN-LAST:event_table_six_infoMouseClicked
+
+    private void Delete_table_four2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Delete_table_four2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Delete_table_four2ActionPerformed
+
+    private void Print_table_four2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Print_table_four2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Print_table_four2ActionPerformed
+
+    private void table_five_infoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_table_five_infoMouseClicked
+          try{
+           int row =table_five_info.getSelectedRow();
+           String Tabel_click=(table_five_info.getModel().getValueAt(row, 0).toString());
+              String sql="select * from addmition where G_R_Number='"+Tabel_click+"'";
+           pst=conn.prepareStatement(sql);
+           rs=pst.executeQuery();
+           if(rs.next()){
+               String add1=rs.getString("G_R_Number");
+               Gr_no.setText(add1);
+               String add2=rs.getString("Class");
+               class_txt.setSelectedItem(add2);
+               String add3=rs.getString("Name");
+               name_txt.setText(add3);
+               String add4=rs.getString("F_name");
+               f_name_txt.setText(add4);
+               String add5=rs.getString("Fee");
+               fee_txt.setText(add5);
+               String add6=rs.getString("Phone_number");
+               Phone_no.setText(add6);
+               String add7=rs.getString("Address");
+               address_txt.setText(add7);
+           }
+           
+       }catch(Exception e){
+           JOptionPane.showMessageDialog(null, e);
+       }finally{
+          try{
+              rs.close();
+              pst.close();
+             }catch(Exception e){
+                           }
+            }
+    }//GEN-LAST:event_table_five_infoMouseClicked
+
+    private void Delete_table_four3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Delete_table_four3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Delete_table_four3ActionPerformed
+
+    private void Print_table_four3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Print_table_four3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Print_table_four3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1037,12 +1287,16 @@ PreparedStatement pst=null;
     private javax.swing.JButton Clear_cmd;
     private javax.swing.JButton Delete_table_four;
     private javax.swing.JButton Delete_table_four1;
+    private javax.swing.JButton Delete_table_four2;
+    private javax.swing.JButton Delete_table_four3;
     private javax.swing.JButton Delete_table_three4;
     private javax.swing.JButton Delete_table_two9;
     private javax.swing.JTextField Gr_no;
     private javax.swing.JTextField Phone_no;
     private javax.swing.JButton Print_table_four;
     private javax.swing.JButton Print_table_four1;
+    private javax.swing.JButton Print_table_four2;
+    private javax.swing.JButton Print_table_four3;
     private javax.swing.JButton Print_table_three4;
     private javax.swing.JButton Print_table_two9;
     private javax.swing.JButton Update_cmd;
@@ -1072,18 +1326,24 @@ PreparedStatement pst=null;
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel17;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane15;
     private javax.swing.JScrollPane jScrollPane16;
     private javax.swing.JScrollPane jScrollPane17;
     private javax.swing.JScrollPane jScrollPane18;
+    private javax.swing.JScrollPane jScrollPane20;
+    private javax.swing.JScrollPane jScrollPane21;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JTabbedPane jTabbedPane14;
     private javax.swing.JTextField name_txt;
     private javax.swing.JTable show_table;
+    private javax.swing.JTable table_five_info;
     private javax.swing.JTable table_four_info;
     private javax.swing.JTable table_one_info;
+    private javax.swing.JTable table_six_info;
     private javax.swing.JTable table_three_info;
     private javax.swing.JTable table_two_info;
     // End of variables declaration//GEN-END:variables

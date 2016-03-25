@@ -119,7 +119,7 @@ PreparedStatement pst=null;
         Gr_no.setFont(new java.awt.Font("Segoe UI Semilight", 0, 14)); // NOI18N
 
         class_txt.setFont(new java.awt.Font("Segoe UI Semibold", 2, 14)); // NOI18N
-        class_txt.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Class", "9th", "10th", "1st year", "2nd year" }));
+        class_txt.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Class", "9th", "10th", "1st year", "2nd year", "B.S.C", "B.Com" }));
         class_txt.addPopupMenuListener(new javax.swing.event.PopupMenuListener() {
             public void popupMenuCanceled(javax.swing.event.PopupMenuEvent evt) {
             }
@@ -363,6 +363,12 @@ PreparedStatement pst=null;
           Gr_no.setText("C");
       }
       if(combo=="2nd year"){
+          Gr_no.setText("D");
+      }
+       if(combo=="B.S.C"){
+          Gr_no.setText("E");
+      }
+        if(combo=="B.Com"){
           Gr_no.setText("D");
       }
     }//GEN-LAST:event_class_txtPopupMenuWillBecomeInvisible
