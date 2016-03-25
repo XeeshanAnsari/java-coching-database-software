@@ -402,6 +402,8 @@ PreparedStatement pst=null;
             }
         });
 
+        jPanel4.setOpaque(false);
+
         table_one_info.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
