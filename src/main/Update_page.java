@@ -156,8 +156,11 @@ PreparedStatement pst=null;
         name_txt = new javax.swing.JTextField();
         Clear_cmd = new javax.swing.JButton();
         jTabbedPane14 = new javax.swing.JTabbedPane();
+        jPanel4 = new javax.swing.JPanel();
         jScrollPane18 = new javax.swing.JScrollPane();
         table_one_info = new javax.swing.JTable();
+        Print_table_one = new javax.swing.JButton();
+        Delete_table_one = new javax.swing.JButton();
         jPanel15 = new javax.swing.JPanel();
         Print_table_two9 = new javax.swing.JButton();
         Delete_table_two9 = new javax.swing.JButton();
@@ -417,7 +420,48 @@ PreparedStatement pst=null;
         });
         jScrollPane18.setViewportView(table_one_info);
 
-        jTabbedPane14.addTab("Class 9th", jScrollPane18);
+        Print_table_one.setFont(new java.awt.Font("Sitka Small", 1, 12)); // NOI18N
+        Print_table_one.setText("Print");
+        Print_table_one.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Print_table_oneActionPerformed(evt);
+            }
+        });
+
+        Delete_table_one.setFont(new java.awt.Font("Sitka Small", 1, 12)); // NOI18N
+        Delete_table_one.setText("Delete");
+        Delete_table_one.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Delete_table_oneActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addComponent(jScrollPane18, javax.swing.GroupLayout.PREFERRED_SIZE, 635, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Delete_table_one)
+                .addGap(18, 18, 18)
+                .addComponent(Print_table_one)
+                .addContainerGap())
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addComponent(jScrollPane18, javax.swing.GroupLayout.PREFERRED_SIZE, 474, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(Print_table_one, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Delete_table_one, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+
+        jTabbedPane14.addTab("Class 9th", jPanel4);
 
         jPanel15.setOpaque(false);
 
@@ -459,7 +503,7 @@ PreparedStatement pst=null;
         jPanel15.setLayout(jPanel15Layout);
         jPanel15Layout.setHorizontalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
+            .addGroup(jPanel15Layout.createSequentialGroup()
                 .addContainerGap(469, Short.MAX_VALUE)
                 .addComponent(Delete_table_two9)
                 .addGap(18, 18, 18)
@@ -1240,7 +1284,8 @@ PreparedStatement pst=null;
     }//GEN-LAST:event_Delete_table_fiveActionPerformed
 
     private void Print_table_fiveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Print_table_fiveActionPerformed
-         MessageFormat header =new MessageFormat("Report Print");
+        
+      MessageFormat header =new MessageFormat("Report Print");
         MessageFormat footer =new MessageFormat("page{0,number,integer}");
         try{
             table_five_info.print(JTable.PrintMode.NORMAL,header,footer);
@@ -1249,6 +1294,32 @@ PreparedStatement pst=null;
             System.err.format("connot Print %s%n", e.getMessage());
         }
     }//GEN-LAST:event_Print_table_fiveActionPerformed
+
+    private void Print_table_oneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Print_table_oneActionPerformed
+        MessageFormat header =new MessageFormat("Report Print");
+        MessageFormat footer =new MessageFormat("page{0,number,integer}");
+        try{
+            table_one_info.print(JTable.PrintMode.NORMAL,header,footer);
+        }catch(java.awt.print.PrinterException e){
+
+            System.err.format("connot Print %s%n", e.getMessage());
+        }
+    }//GEN-LAST:event_Print_table_oneActionPerformed
+
+    private void Delete_table_oneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Delete_table_oneActionPerformed
+        try{
+            String sql= "delete  from  addmition where G_R_number=? ";
+            int row =table_one_info.getSelectedRow();
+            String Tabel_click=(table_one_info.getModel().getValueAt(row, 0).toString());
+            pst=conn.prepareStatement(sql);
+            pst.setString(1,Tabel_click );
+            pst.execute();
+            JOptionPane.showMessageDialog(null," Deleted" );
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }
+        Update_table();
+    }//GEN-LAST:event_Delete_table_oneActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1289,6 +1360,7 @@ PreparedStatement pst=null;
     private javax.swing.JButton Clear_cmd;
     private javax.swing.JButton Delete_table_five;
     private javax.swing.JButton Delete_table_four;
+    private javax.swing.JButton Delete_table_one;
     private javax.swing.JButton Delete_table_six;
     private javax.swing.JButton Delete_table_three;
     private javax.swing.JButton Delete_table_two9;
@@ -1296,6 +1368,7 @@ PreparedStatement pst=null;
     private javax.swing.JTextField Phone_no;
     private javax.swing.JButton Print_table_five;
     private javax.swing.JButton Print_table_four;
+    private javax.swing.JButton Print_table_one;
     private javax.swing.JButton Print_table_six;
     private javax.swing.JButton Print_table_three4;
     private javax.swing.JButton Print_table_two9;
@@ -1328,6 +1401,7 @@ PreparedStatement pst=null;
     private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane15;
     private javax.swing.JScrollPane jScrollPane16;
