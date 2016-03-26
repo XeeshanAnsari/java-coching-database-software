@@ -81,6 +81,31 @@ PreparedStatement pst=null;
            }finally{
           closedatabse();
             } 
+         
+         try{
+           String sql="Select * from addmition  where Class='B.S.C'";
+           pst=conn.prepareStatement(sql);
+           rs=pst.executeQuery();
+           table_five.setModel(DbUtils.resultSetToTableModel(rs));
+       } catch(Exception e){
+           JOptionPane.showMessageDialog(null, e);
+           }finally{
+          closedatabse();
+            }
+       
+       
+       
+         try{
+           String sql="Select * from addmition  where Class='B.Com'";
+           pst=conn.prepareStatement(sql);
+           rs=pst.executeQuery();
+           table_six.setModel(DbUtils.resultSetToTableModel(rs));
+       } catch(Exception e){
+           JOptionPane.showMessageDialog(null, e);
+            } 
+             finally{
+          closedatabse();
+            } 
        
     }
      
@@ -133,6 +158,20 @@ PreparedStatement pst=null;
         Delete_table_four = new javax.swing.JButton();
         search_table_four = new javax.swing.JTextField();
         combo_four_txt = new javax.swing.JComboBox<>();
+        jPanel5 = new javax.swing.JPanel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        table_five = new javax.swing.JTable();
+        search_table_five = new javax.swing.JTextField();
+        combo_five_txt = new javax.swing.JComboBox<>();
+        Delete_table_five = new javax.swing.JButton();
+        Print_table_five = new javax.swing.JButton();
+        jPanel6 = new javax.swing.JPanel();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        table_six = new javax.swing.JTable();
+        search_table_six = new javax.swing.JTextField();
+        combo_six_txt = new javax.swing.JComboBox<>();
+        Delete_table_six = new javax.swing.JButton();
+        Print_table_six = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -435,6 +474,146 @@ PreparedStatement pst=null;
         );
 
         jTabbedPane1.addTab("2nd Year", jPanel3);
+
+        jPanel5.setOpaque(false);
+
+        table_five.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane5.setViewportView(table_five);
+
+        search_table_five.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                search_table_fiveKeyReleased(evt);
+            }
+        });
+
+        combo_five_txt.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Search", "G_R no", "Name" }));
+
+        Delete_table_five.setText("Delete");
+        Delete_table_five.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Delete_table_fiveActionPerformed(evt);
+            }
+        });
+
+        Print_table_five.setText("Print");
+        Print_table_five.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Print_table_fiveActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 1115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(combo_five_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(search_table_five, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(730, 730, 730)
+                .addComponent(Delete_table_five)
+                .addGap(18, 18, 18)
+                .addComponent(Print_table_five)
+                .addContainerGap())
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Print_table_five)
+                    .addComponent(Delete_table_five)
+                    .addComponent(search_table_five, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(combo_five_txt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("B.S.C", jPanel5);
+
+        jPanel6.setOpaque(false);
+
+        table_six.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane6.setViewportView(table_six);
+
+        search_table_six.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                search_table_sixKeyReleased(evt);
+            }
+        });
+
+        combo_six_txt.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Search", "G_R no", "Name" }));
+
+        Delete_table_six.setText("Delete");
+        Delete_table_six.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Delete_table_sixActionPerformed(evt);
+            }
+        });
+
+        Print_table_six.setText("Print");
+        Print_table_six.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Print_table_sixActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 1115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(combo_six_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(search_table_six, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(730, 730, 730)
+                .addComponent(Delete_table_six)
+                .addGap(18, 18, 18)
+                .addComponent(Print_table_six)
+                .addContainerGap())
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Print_table_six)
+                    .addComponent(Delete_table_six)
+                    .addComponent(search_table_six, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(combo_six_txt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("B.Com", jPanel6);
 
         getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, 1120, 540));
         jTabbedPane1.getAccessibleContext().setAccessibleParent(jTabbedPane1);
@@ -807,6 +986,130 @@ PreparedStatement pst=null;
       }
     }//GEN-LAST:event_Print_table_oneActionPerformed
 
+    private void search_table_fiveKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_search_table_fiveKeyReleased
+        String search= search_table_five.getText();    
+           String combo= combo_five_txt.getSelectedItem().toString();
+        if("Search".equals(combo)){
+               JOptionPane.showMessageDialog(null, "please first select");
+           }
+         if (combo=="G_R no"){ 
+         try{    
+               String sql="Select * from addmition where G_R_Number='"+search+"'";
+            pst= conn.prepareStatement(sql);
+            rs=pst.executeQuery();
+            table_five.setModel(DbUtils.resultSetToTableModel(rs));   
+            
+            }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }finally{
+         closedatabse();
+            }   
+    } 
+         else if(combo=="Name"){
+              try{    
+               String sql="Select * from addmition where Name='"+search+"'";
+            pst= conn.prepareStatement(sql);
+            rs=pst.executeQuery();
+            table_five.setModel(DbUtils.resultSetToTableModel(rs));   
+            
+            }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }finally{
+         closedatabse();
+            }   
+         }
+    }//GEN-LAST:event_search_table_fiveKeyReleased
+
+    private void Delete_table_fiveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Delete_table_fiveActionPerformed
+         try{
+             String sql= "delete  from  addmition where G_R_number=? ";
+            int row =table_five.getSelectedRow();
+           String Tabel_click=(table_five.getModel().getValueAt(row, 0).toString()); 
+           pst=conn.prepareStatement(sql);
+           pst.setString(1,Tabel_click );
+           pst.execute();
+           JOptionPane.showMessageDialog(null," Deleted" );
+       }catch(SQLException | HeadlessException e){
+        JOptionPane.showMessageDialog(null, e);   
+    }finally{
+          closedatabse();
+            }
+         Update_table();
+    }//GEN-LAST:event_Delete_table_fiveActionPerformed
+
+    private void Print_table_fiveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Print_table_fiveActionPerformed
+         MessageFormat header =new MessageFormat("Report Print");
+     MessageFormat footer =new MessageFormat("page{0,number,integer}");
+        try{
+          table_five.print(JTable.PrintMode.NORMAL,header,footer);
+      }catch(java.awt.print.PrinterException e){
+          
+          System.err.format("connot Print %s%n", e.getMessage());
+      }
+    }//GEN-LAST:event_Print_table_fiveActionPerformed
+
+    private void search_table_sixKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_search_table_sixKeyReleased
+        String search= search_table_six.getText();    
+           String combo= combo_six_txt.getSelectedItem().toString();
+        if("Search".equals(combo)){
+               JOptionPane.showMessageDialog(null, "please first select");
+           }
+         if (combo=="G_R no"){ 
+         try{    
+               String sql="Select * from addmition where G_R_Number='"+search+"'";
+            pst= conn.prepareStatement(sql);
+            rs=pst.executeQuery();
+            table_six.setModel(DbUtils.resultSetToTableModel(rs));   
+            
+            }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }finally{
+         closedatabse();
+            }   
+    } 
+         else if(combo=="Name"){
+              try{    
+               String sql="Select * from addmition where Name='"+search+"'";
+            pst= conn.prepareStatement(sql);
+            rs=pst.executeQuery();
+            table_six.setModel(DbUtils.resultSetToTableModel(rs));   
+            
+            }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }finally{
+         closedatabse();
+            }   
+         }
+    }//GEN-LAST:event_search_table_sixKeyReleased
+
+    private void Delete_table_sixActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Delete_table_sixActionPerformed
+         try{
+             String sql= "delete  from  addmition where G_R_number=? ";
+            int row =table_six.getSelectedRow();
+           String Tabel_click=(table_six.getModel().getValueAt(row, 0).toString()); 
+           pst=conn.prepareStatement(sql);
+           pst.setString(1,Tabel_click );
+           pst.execute();
+           JOptionPane.showMessageDialog(null," Deleted" );
+       }catch(SQLException | HeadlessException e){
+        JOptionPane.showMessageDialog(null, e);   
+    }finally{
+          closedatabse();
+            }
+         Update_table();
+    }//GEN-LAST:event_Delete_table_sixActionPerformed
+
+    private void Print_table_sixActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Print_table_sixActionPerformed
+         MessageFormat header =new MessageFormat("Report Print");
+     MessageFormat footer =new MessageFormat("page{0,number,integer}");
+        try{
+          table_six.print(JTable.PrintMode.NORMAL,header,footer);
+      }catch(java.awt.print.PrinterException e){
+          
+          System.err.format("connot Print %s%n", e.getMessage());
+      }
+    }//GEN-LAST:event_Print_table_sixActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -841,16 +1144,22 @@ PreparedStatement pst=null;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Delete_table_five;
     private javax.swing.JButton Delete_table_four;
     private javax.swing.JButton Delete_table_one;
+    private javax.swing.JButton Delete_table_six;
     private javax.swing.JButton Delete_table_three;
     private javax.swing.JButton Delete_table_two;
+    private javax.swing.JButton Print_table_five;
     private javax.swing.JButton Print_table_four;
     private javax.swing.JButton Print_table_one;
+    private javax.swing.JButton Print_table_six;
     private javax.swing.JButton Print_table_three;
     private javax.swing.JButton Print_table_two;
+    private javax.swing.JComboBox<String> combo_five_txt;
     private javax.swing.JComboBox<String> combo_four_txt;
     private javax.swing.JComboBox<String> combo_one_txt;
+    private javax.swing.JComboBox<String> combo_six_txt;
     private javax.swing.JComboBox<String> combo_three_txt;
     private javax.swing.JComboBox<String> combo_two_txt;
     private javax.swing.JLabel jLabel1;
@@ -868,19 +1177,27 @@ PreparedStatement pst=null;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTextField search_table_five;
     private javax.swing.JTextField search_table_four;
     private javax.swing.JTextField search_table_one;
+    private javax.swing.JTextField search_table_six;
     private javax.swing.JTextField search_table_three;
     private javax.swing.JTextField search_table_two;
+    private javax.swing.JTable table_five;
     private javax.swing.JTable table_four;
     private javax.swing.JTable table_one;
+    private javax.swing.JTable table_six;
     private javax.swing.JTable table_three;
     private javax.swing.JTable table_two;
     // End of variables declaration//GEN-END:variables
