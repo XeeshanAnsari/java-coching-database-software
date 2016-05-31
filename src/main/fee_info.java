@@ -1442,7 +1442,7 @@ PreparedStatement pst =null;
     }//GEN-LAST:event_combo_fourActionPerformed
 
     private void print_table_oneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_print_table_oneActionPerformed
-        MessageFormat header =new MessageFormat("Report Print");
+     MessageFormat header =new MessageFormat("Report Print");
      MessageFormat footer =new MessageFormat("page{0,number,integer}");
         try{
           fee_table_one.print(JTable.PrintMode.NORMAL,header,footer);

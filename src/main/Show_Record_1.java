@@ -926,7 +926,8 @@ PreparedStatement pst=null;
     }//GEN-LAST:event_search_table_twoKeyReleased
 
     private void search_table_oneKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_search_table_oneKeyReleased
-        String search= search_table_one.getText();    
+       
+        String search= search_table_one.getText();
            String combo= combo_one_txt.getSelectedItem().toString();
         if("Search".equals(combo)){
                JOptionPane.showMessageDialog(null, "please first select");
@@ -944,6 +945,7 @@ PreparedStatement pst=null;
          closedatabse();
             }   
     } 
+         
          else if(combo=="Name"){
               try{    
                String sql="Select * from addmition where Name='"+search+"'";
@@ -955,7 +957,9 @@ PreparedStatement pst=null;
         }finally{
          closedatabse();
             }   
+             
          }
+        
     }//GEN-LAST:event_search_table_oneKeyReleased
 
     private void Delete_table_oneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Delete_table_oneActionPerformed
